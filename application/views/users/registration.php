@@ -22,6 +22,13 @@
 						<div class="form-body form-body-info">
 							<form action="" method="post">
 								<div class="form-group valid-form">
+									<select name="role" required="" value="<?php echo !empty($user['role'])?$user['role']:''; ?>">
+										<option value="Select">Select...</option>
+										<option value="Owner">Owner</option>
+										<option value="Renter">Renter</option>
+									</select>
+								</div>
+								<div class="form-group valid-form">
 									<input type="text" class="form-control" name="name" placeholder="Name" required="" value="<?php echo !empty($user['name'])?$user['name']:''; ?>">
 									<?php echo form_error('name','<span class="help-block">','</span>'); ?>
 								</div>
@@ -68,7 +75,7 @@
 								</div>
 							</form>
 						</div>
-						<p class="footInfo">Already have an account? <a href="<?php echo base_url(); ?>users/login">Login here</a></p>
+						<p class="footInfo">Already have an account? <a href="<?php echo base_url(); ?>/index.php/users/login">Login here</a></p>
 					</div>
 				</div>
 			</div>
