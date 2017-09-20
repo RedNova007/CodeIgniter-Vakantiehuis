@@ -21,13 +21,32 @@
 						</div>
 						<div class="form-body form-body-info">
 							<form action="" method="post">
-								<div class="form-group valid-form">
-									<select name="role" required="" value="<?php echo !empty($user['role'])?$user['role']:''; ?>">
-										<option value="Select">Select...</option>
-										<option value="Owner">Owner</option>
-										<option value="Renter">Renter</option>
-									</select>
+						
+
+									<div class="form-group valid-form">
+									<?php
+									if(!empty($user['gender']) && $user['gender'] == 'Female'){
+										$fcheck = 'checked="checked"';
+										$mcheck = '';
+									}else{
+										$mcheck = 'checked="checked"';
+										$fcheck = '';
+									}
+									?>
+									<div class="radio">
+										<label>
+										<input type="radio" name="role" value="Owner" <?php echo $mcheck; ?>>
+										Owner
+										</label>
+									</div>
+									<div class="radio">
+										<label>
+										  <input type="radio" name="role" value="Renter" <?php echo $fcheck; ?>>
+										  Renter
+										</label>
+									</div>
 								</div>
+
 								<div class="form-group valid-form">
 									<input type="text" class="form-control" name="name" placeholder="Name" required="" value="<?php echo !empty($user['name'])?$user['name']:''; ?>">
 									<?php echo form_error('name','<span class="help-block">','</span>'); ?>
