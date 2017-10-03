@@ -1,0 +1,82 @@
+.topmenu {
+	color: white;
+}
+
+.topmenu:hover{
+	color: red;
+}
+
+.topmenu2{
+	color: black;
+}
+
+.header{
+	width: 2000px;
+	background-color: red;
+	padding-top: 20px;
+	padding-bottom: 25px;
+	z-index: 100;
+	text-align: center;
+	font-family: Tahoma;
+}
+
+h5{
+	font-family: Tahoma;
+	text-decoration: initial;
+	color: rgba(215, 40, 40, 0.9);
+}
+
+hr{
+	display: block;
+	position: relative;
+	padding: 0;
+	margin: 8px auto;
+	height: 0;
+	width: 100%;
+	max-height: 0;
+	font-size: 1px;
+	line-height: 0;
+	clear: both;
+	border: none;
+	border-top:1px solid #aaaaaa;
+	border-bottom:1px solid #ffffff;
+}
+
+li{
+	display: inline;
+	margin-left: 10px;
+}
+
+ul li a{
+	color: white;
+	text-decoration: none;
+}
+
+.overview-table{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+img.float{
+	float: left;
+	margin-left: 450px;
+	margin-right: -700px;
+	margin-top: -20px;
+	margin-bottom: -15px;
+}
+
+h3{
+	font-family: Arial;
+}
+
+.info_balk{
+	background-color: rgba(50,50,50,0.80);
+	margin-top: 476px;
+	border-color: red;
+	border: 5px;
+}
+
+body {
+	background-color: red; 
+}
+
