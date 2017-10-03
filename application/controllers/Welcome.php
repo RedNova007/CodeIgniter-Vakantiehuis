@@ -31,7 +31,7 @@ class Welcome extends CI_Controller {
 		$data['vacation_home'] = $this->welcome_model->get_vacation_home();
 		$data['homepage_picture'] = $this->welcome_model->get_homepage_picture();
 
-		$this->load->view('_templates/header');;
+		$this->load->view('_templates/header');
 		$this->load->view('welcome_message', $data);
 	}
 }

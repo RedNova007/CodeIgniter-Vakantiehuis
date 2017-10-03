@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<link href="<?php echo base_url(); ?>assets/css/mainstyle.css" rel='stylesheet' type='text/css' />
+	<link href="<?php echo base_url(); ?>assets/css/style.css" rel='stylesheet' type='text/css' />
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
 </head>
 <body>
