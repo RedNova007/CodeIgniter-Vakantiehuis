@@ -94,7 +94,7 @@
 								</div>
 							</form>
 						</div>
-						<p class="footInfo">Already have an account? <a href="<?php echo base_url(); ?>/index.php/users/login">Login here</a></p>
+						<p class="footInfo">Already have an account? <a href="<?php echo base_url(); ?>users/login">Login here</a></p>
 					</div>
 				</div>
 			</div>
