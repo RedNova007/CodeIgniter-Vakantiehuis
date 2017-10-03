@@ -51,6 +51,7 @@ class Users extends CI_Controller {
                 if($checkLogin){
                     $this->session->set_userdata('isUserLoggedIn',TRUE);
                     $this->session->set_userdata('userId',$checkLogin['id']);
+                    $this->session->set_userdata('role', $checkLogin['role']);
                     redirect('users/account/');
                 }else{
                     $data['error_msg'] = 'Wrong email or password, please try again.';
@@ -59,6 +60,7 @@ class Users extends CI_Controller {
         }
         //load the view
         $this->load->view('users/login', $data);
+        
     }
     
     /*
@@ -72,20 +74,22 @@ class Users extends CI_Controller {
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email|callback_email_check');
             $this->form_validation->set_rules('password', 'password', 'required');
             $this->form_validation->set_rules('conf_password', 'confirm password', 'required|matches[password]');
+            $this->form_validation->set_rules('role', 'Role', 'required');
 
             $userData = array(
                 'name' => strip_tags($this->input->post('name')),
                 'email' => strip_tags($this->input->post('email')),
                 'password' => md5($this->input->post('password')),
                 'gender' => $this->input->post('gender'),
-                'phone' => strip_tags($this->input->post('phone'))
+                'phone' => strip_tags($this->input->post('phone')),
+                'role' =>  strip_tags($this->input->post('role'))
             );
 
             if($this->form_validation->run() == true){
                 $insert = $this->user->insert($userData);
                 if($insert){
                     $this->session->set_userdata('success_msg', 'Your registration was successfully. Please login to your account.');
-                    redirect('users/login');
+                    redirect('index.php/users/login');
                 }else{
                     $data['error_msg'] = 'Some problems occured, please try again.';
                 }
