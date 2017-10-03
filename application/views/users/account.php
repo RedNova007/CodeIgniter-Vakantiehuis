@@ -8,8 +8,8 @@
     <!-- validation -->
 	<div class="grids">
 		<div class="progressbar-heading grids-heading">
-			<h2>User Account</h2>
-		</div>
+			<h2><?php echo $user ['role']; ?> Account</h2>
+		</div> 
 		
 		<div class="forms-grids">
 			<div class="forms3">
@@ -25,7 +25,10 @@
 							<p><b>Email: </b><?php echo $user['email']; ?></p>
 							<p><b>Phone: </b><?php echo $user['phone']; ?></p>
 							<p><b>Gender: </b><?php echo $user['gender']; ?></p>
-						</div>
+							<?php if ($user['role'] == 'Owner'){?>
+							<a href="<?php echo base_url(); ?>HouseOverview/register"><button>Registrate a Vacationhouse</button></a>
+							<?php } ?>			
+						</div> 
 					</div>
 				</div>
 			</div>

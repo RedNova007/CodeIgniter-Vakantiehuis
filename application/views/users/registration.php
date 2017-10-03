@@ -20,33 +20,7 @@
 							<h3>Register Form :</h3>
 						</div>
 						<div class="form-body form-body-info">
-							<form action="" method="post">
-						
-
-									<div class="form-group valid-form">
-									<?php
-									if(!empty($user['gender']) && $user['gender'] == 'Female'){
-										$fcheck = 'checked="checked"';
-										$mcheck = '';
-									}else{
-										$mcheck = 'checked="checked"';
-										$fcheck = '';
-									}
-									?>
-									<div class="radio">
-										<label>
-										<input type="radio" name="role" value="Owner" <?php echo $mcheck; ?>>
-										Owner
-										</label>
-									</div>
-									<div class="radio">
-										<label>
-										  <input type="radio" name="role" value="Renter" <?php echo $fcheck; ?>>
-										  Renter
-										</label>
-									</div>
-								</div>
-
+							<form action="" method="post">					
 								<div class="form-group valid-form">
 									<input type="text" class="form-control" name="name" placeholder="Name" required="" value="<?php echo !empty($user['name'])?$user['name']:''; ?>">
 									<?php echo form_error('name','<span class="help-block">','</span>'); ?>
@@ -89,12 +63,35 @@
 										</label>
 									</div>
 								</div>
+									<div class="form-group valid-form">
+									<?php
+									if(!empty($user['role']) && $user['role'] == 'Owner'){
+										$fcheck = 'checked="checked"';
+										$mcheck = '';
+									}else{
+										$mcheck = 'checked="checked"';
+										$fcheck = '';
+									}
+									?>
+									<div class="radio">
+										<label>
+										<input type="radio" name="role" value="Owner" <?php echo $mcheck; ?>>
+										Owner
+										</label>
+									</div>
+									<div class="radio">
+										<label>
+										  <input type="radio" name="role" value="Renter" <?php echo $fcheck; ?>>
+										  Renter
+										</label>
+									</div>
+								</div>
 								<div class="form-group">
 									<input type="submit" name="regisSubmit" class="btn-primary" value="Submit"/>
 								</div>
 							</form>
 						</div>
-						<p class="footInfo">Already have an account? <a href="<?php echo base_url(); ?>/index.php/users/login">Login here</a></p>
+						<p class="footInfo">Already have an account? <a href="<?php echo base_url(); ?>index.php/users/login">Login here</a></p>
 					</div>
 				</div>
 			</div>
