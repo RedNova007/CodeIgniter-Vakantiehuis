@@ -213,6 +213,21 @@ body {
 .radio label, .checkbox label {
     color: rgba(236, 242, 243, 0.47);
 }
+.selectbox {
+
+}
+
+.selectbox select {
+	background-color: lightgray;
+	border: 1px solid #ccc;
+    font-size: 16px;
+    height: 34px;
+    width: 368px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
 .forms3 {
     margin: 36px 0px 5px;
 }
@@ -243,6 +258,14 @@ input.form-control.inputPassword {
 .register-form .form-group:last-child {
     margin-top: 30px;
     width: 100%;
+}
+.register-form .select {
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   height: 29px;
+   padding: 5px; /* If you add too much padding here, the options won't show in IE */
+   width: 268px;
 }
 button[type="submit"] input[type="submit"] {
     background: #00bcd4;
