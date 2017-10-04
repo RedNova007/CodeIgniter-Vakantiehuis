@@ -9,7 +9,8 @@ class Homes extends CI_Controller {
         $this->load->model('Homes_model');
     }
 
-    public function index() {
+    public function index() 
+    {
     	$this->load->view('templates/header;');
     	$this->load->view('vacation_homes');
     }
