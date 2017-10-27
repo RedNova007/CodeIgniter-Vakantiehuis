@@ -26,11 +26,11 @@
 									<?php echo form_error('name','<span class="help-block">','</span>'); ?>
 								</div>
 								<div class="form-group has-feedback">
-									<input type="email" class="form-control inputEmail" name="email" placeholder="Email" data-error="That email address is invalid" required="" value="<?php echo !empty($user['email'])?$user['email']:''; ?>">
+									<input type="email" class="form-control inputEmail" name="email" placeholder="Example@gmail.com" data-error="That email address is invalid" required="" value="<?php echo !empty($user['email'])?$user['email']:''; ?>">
 									<?php echo form_error('email','<span class="help-block">','</span>'); ?>
 								</div>
 								<div class="form-group valid-form">
-									<input type="text" class="form-control" name="phone" placeholder="Phone" value="<?php echo !empty($user['phone'])?$user['phone']:''; ?>">
+									<input type="text" class="form-control" name="phone" placeholder="06123456789" required="" value="<?php echo !empty($user['phone'])?$user['phone']:''; ?>">
 								</div>
 								<div class="form-group">
 								  <input type="password" class="form-control inputPassword" name="password" placeholder="Password" required="">
