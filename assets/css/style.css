@@ -17,6 +17,13 @@
 	z-index: 1;
 	background-color: orange;
 	float: left;
+	margin: 0 auto;
+}
+
+.listcontainer{
+	z-index: 1;
+	background-color: orange;
+	margin: 0 auto;
 }
 
 .logo{
@@ -90,37 +97,14 @@ input[type=text3] {
 	margin-left: 15px;
 }
 
-.block {
-  float: left;
-  position: relative;
-  width: 300px;
-  height: 400px;
-  margin: 15px;
-  border: 1px solid rgba(0, 0, 0, .2);
-}
-
-.left{
+.offers{
 	background-color: white; 
-}
-
-.middle1{
-	background-color: white; 
-}
-
-.middle2{
-	background-color: white; 
-}
-
-.middle3{
-	background-color: white; 
-}
-
-.middle4{
-	background-color: white; 
-}
-
-.right{
-	background-color: white; 
+	float: left;
+    position: relative;
+    width: 300px;
+    height: 242px;
+    margin: 15px;
+    border: 1px solid rgba(0, 0, 0, .2);
 }
 
 p{
@@ -159,4 +143,45 @@ ul li a:hover{
 
 h3{
 	font-family: Arial;
+}
+
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th{
+	background-color: orange;
+    color: white;
+}
+
+th, td {
+	font-family: 'Roboto', sans-serif;
+    padding: 15px;
+}
+
+.offer_sleeps{
+	float: left;
+	padding-left: 25px;
+	padding-right: 20px;
+	background: url('icons/guests.png') no-repeat;
+}
+
+.offer_bedrooms{
+	float: left;
+	padding-left: 25px;
+	padding-right: 20px;
+	background: url('icons/sleeps.png')no-repeat;
+}
+
+.offer_bathrooms{
+	float: left;
+	padding-left: 25px;
+	padding-right: 20px;
+	background: url('icons/bathtub.png')no-repeat;
 }

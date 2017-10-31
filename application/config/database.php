@@ -74,12 +74,12 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> '',
+	'dsn'	=> 'mysql:host=localhost; dbname=vakantiehuisje; charset=utf8;',
 	'hostname' => 'localhost',
-	'username' => 'vakhuis_data',
-	'password' => 'Huis12345!',
-	'database' => 'vakhuis_data',
-	'dbdriver' => 'mysqli',
+	'username' => 'root',
+	'password' => '',
+	'database' => '',
+	'dbdriver' => 'pdo',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
@@ -94,3 +94,26 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+
+$db['davinci-test'] = array(
+    'dsn'  => 'mysql:host=localhost; dbname=vakhuis_data; charset=utf8;',
+    'hostname' => 'localhost',
+    'username' => 'vakhuis_data',
+    'password' => 'Huis12345!',
+    'database' => '',
+    'dbdriver' => 'pdo',
+    'dbprefix' => '',
+    'pconnect' => FALSE,
+    'db_debug' => (ENVIRONMENT !== 'production'),
+    'cache_on' => FALSE,
+    'cachedir' => '',
+    'char_set' => 'utf8',
+    'dbcollat' => 'utf8_general_ci',
+    'swap_pre' => '',
+    'encrypt' => FALSE,
+    'compress' => FALSE,
+    'stricton' => FALSE,
+    'failover' => array(),
+    'save_queries' => TRUE
+); 

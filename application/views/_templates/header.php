@@ -5,10 +5,10 @@
     </div>
     <ul class="navigation">
 	    	<li>
-	            <a class="topmenu" href="">Home</a> </li>
+	            <a class="topmenu" href="<?php echo base_url(); ?>">Home</a></li>
 	        <li>
-	            <a class="topmenu" href="users/registration">Register</a></li> 
+	            <a class="topmenu" href="<?php echo base_url(); ?>users/registration">Register</a></li> 
 	        <li>
-	            <a class="topmenu" href="users/login">Login</a></li>
+	            <a class="topmenu" href="<?php echo base_url(); ?>users/login">Login</a></li>
     </ul>
 </div>

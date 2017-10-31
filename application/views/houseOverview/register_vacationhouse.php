@@ -22,21 +22,21 @@
 						<div class="form-body form-body-info">
 							<form action="" method="post">
 								<div class="form-group valid-form">
-									<input type="text" class="form-control" name="name" placeholder="Name Vacation home" required="" value="<?php echo !empty($vacationhouse['name'])?$vacationhouse['name']:''; ?>">
+									<input type="text" class="form-control" name="name" maxlength="30" placeholder="Name Vacationhouse" required="" value="<?php echo !empty($vacationhouse['name'])?$vacationhouse['name']:''; ?>">
 									<?php echo form_error('name','<span class="help-block">','</span>'); ?>
 								</div>
 								<div class="form-group has-feedback">
-									<input type="text" cols="250" class="form-control" name="description" placeholder="Description" data-error="Description is invalid" required="" value="<?php echo !empty($vacationhouse['description'])?$vacationhouse['description']:''; ?>">
+									<input type="text" cols="250" class="form-control" name="description" maxlength="200" placeholder="Description" data-error="Description is invalid" required="" value="<?php echo !empty($vacationhouse['description'])?$vacationhouse['description']:''; ?>">
 									<?php echo form_error('description','<span class="help-block">','</span>'); ?>
 								</div>		
 							<br />			
 								<div class="form-group has-feedback">
-									<input type="text" class="form-control" name="price_per_night" placeholder="Price per night &euro;" data-error="Price per night is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
+									<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" name="price_per_night" placeholder="Price per night &euro;" data-error="Price per night is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
 									<?php echo form_error('price_per_night','<span class="help-block">','</span>'); ?>
 								</div>		
 							<br />
 								<div class="form-group has-feedback">
-									<input type="text" class="form-control" name="price_per_week" placeholder="Price per week &euro;" data-error="Price per week is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
+									<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" name="price_per_week" placeholder="Price per week &euro;" data-error="Price per week is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
 									<?php echo form_error('price_per_night','<span class="help-block">','</span>'); ?>
 								</div>		
 							<br />							
@@ -67,7 +67,7 @@
 							<br />
 								<div class="selectbox">
 									Damage deposit:<br />
-									<select name="damage_deposit" value="damage_deposit" Placeholder="0">
+									<select name="damage_deposit" value="damage_deposit" required="">
 										<option value="0">&euro;0</option>
 										<option value="10">&euro;10</option>
 										<option value="25">&euro;25</option>
@@ -97,7 +97,7 @@
 							<br />	
 								<div class="selectbox">
 									Minimum stay:<br />
-									<select name="minimum_stay" value="minimum_stay" Placeholder="0">
+									<select name="minimum_stay" value="minimum_stay" required="">
 										<option value="0">0 Day</option>
 										<option value="1">1 Day</option>
 										<option value="2">2 Days</option>
@@ -124,7 +124,7 @@
 							<br />						
 								<div class="selectbox">
 									Country:<br />
-									<select name="country_id" value="country_id" Placeholder="Choose country">
+									<select name="country_id" value="country_id"  required="">
 										<option value="4">Afghanistan</option>
 										<option value="248">Åland Islands</option>
 										<option value="8">Albania</option>
@@ -379,7 +379,7 @@
 							<br />
 								<div class="selectbox">
 									Bedrooms:<br />
-									<select name="bedrooms" value="bedrooms" Placeholder="0">
+									<select name="bedrooms" value="bedrooms" required="">
 										<option value="0">0</option>
 										<option value="1">1</option>
 										<option value="2">2</option>
@@ -397,7 +397,7 @@
 							<br />
 								<div class="selectbox">
 									Bathrooms:<br />
-									<select name="bathrooms" value="bathrooms" Placeholder="0">
+									<select name="bathrooms" value="bathrooms"  required="">
 										<option value="0">0</option>
 										<option value="1">1</option>
 										<option value="2">2</option>

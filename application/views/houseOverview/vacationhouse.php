@@ -21,15 +21,15 @@
 						</div>
 						<div class="account-info">
 							<p><b>Name: </b><?php echo $vacationhouse['name']; ?></p>
-							<p><b>Description: </b><?php echo $user['description']; ?></p>
-							<p><b>Bedrooms: </b><?php echo $user['bedrooms']; ?></p>
-							<p><b>Bathrooms: </b><?php echo $user['bathrooms']; ?></p>		
-							<p><b>Sleeps: </b><?php echo $user['bathrooms']; ?></p>	
-							<p><b>Minimum Stay: </b><?php echo $user['minStay']; ?></p>	
-							<p><b>Pets: </b><?php echo $user['pets']; ?></p>	
-							<p><b>Price Per Night: </b><?php echo $user['pricePerNight']; ?></p>	
-							<p><b>Price Per Week: </b><?php echo $user['pricePerWeek']; ?></p>	
-							<p><b>Damage Deposit: </b><?php echo $user['damageDeposit']; ?></p>	
+							<p><b>Description: </b><?php echo $vacationhouse['description']; ?></p>
+							<p><b>Bedrooms: </b><?php echo $vacationhouse['bedrooms']; ?></p>
+							<p><b>Bathrooms: </b><?php echo $vacationhouse['bathrooms']; ?></p>		
+							<p><b>Sleeps: </b><?php echo $vacationhouse['bathrooms']; ?></p>	
+							<p><b>Minimum Stay: </b><?php echo $vacationhouse['minStay']; ?></p>	
+							<p><b>Pets: </b><?php echo $vacationhouse['pets']; ?></p>	
+							<p><b>Price Per Night: </b><?php echo $vacationhouse['pricePerNight']; ?></p>	
+							<p><b>Price Per Week: </b><?php echo $vacationhouse['pricePerWeek']; ?></p>	
+							<p><b>Damage Deposit: </b><?php echo $vacationhouse['damageDeposit']; ?></p>	
 						</div>
 					</div>
 				</div>
