@@ -31,12 +31,12 @@
 								</div>		
 							<br />			
 								<div class="form-group has-feedback">
-									<input type="number" class="form-control" name="price_per_night" placeholder="Price per night &euro;" data-error="Price per night is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
+									<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" name="price_per_night" placeholder="Price per night &euro;" data-error="Price per night is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
 									<?php echo form_error('price_per_night','<span class="help-block">','</span>'); ?>
 								</div>		
 							<br />
 								<div class="form-group has-feedback">
-									<input type="number" class="form-control" name="price_per_week" placeholder="Price per week &euro;" data-error="Price per week is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
+									<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" name="price_per_week" placeholder="Price per week &euro;" data-error="Price per week is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
 									<?php echo form_error('price_per_night','<span class="help-block">','</span>'); ?>
 								</div>		
 							<br />							
