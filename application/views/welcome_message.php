@@ -31,16 +31,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<div class="offers">
 				
 				<img src="data:image/jpeg;base64,<?php echo base64_encode($vacation_home['thumbnail']); ?>"/>
-				<p>
+				<p class="offer_info">
 					<?= $vacation_home['name']; ?><br>
 					<div class="offer_sleeps">
-						<?=	$vacation_home['sleeps']?>
+						<p><?=	$vacation_home['sleeps']?></p>
 					</div>
 					<div class="offer_bedrooms">
-						<?=	$vacation_home['bedrooms']?>
+						<p><?=	$vacation_home['bedrooms']?></p>
 					</div>
 					<div class="offer_bathrooms">
-						<?=	$vacation_home['bathrooms']?>
+						<p><?=	$vacation_home['bathrooms']?></p>
 					</div>
 				</p>
 			</div>
@@ -49,9 +49,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		}	
 	?>
 
-	<!--<div>
-	   <a class="all_homes" href="homes"><p>All vacation homes</p></a> </li>
-	</div>-->
+	<div class="all_homes">
+		<p>
+	   		<a href="homes"><p>See all vacation homes</p></a>
+		</p>
+	</div>
 
 </div>
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
