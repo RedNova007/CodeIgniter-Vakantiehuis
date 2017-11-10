@@ -20,16 +20,20 @@
 							<h3>Welcome</h3>
 						</div>
 						<div class="account-info">
+
+							<p><?php var_dump($vacationhouse) ?> </p>
 							<p><b>Name: </b><?php echo $vacationhouse['name']; ?></p>
 							<p><b>Description: </b><?php echo $vacationhouse['description']; ?></p>
 							<p><b>Bedrooms: </b><?php echo $vacationhouse['bedrooms']; ?></p>
 							<p><b>Bathrooms: </b><?php echo $vacationhouse['bathrooms']; ?></p>		
 							<p><b>Sleeps: </b><?php echo $vacationhouse['bathrooms']; ?></p>	
-							<p><b>Minimum Stay: </b><?php echo $vacationhouse['minStay']; ?></p>	
-							<p><b>Pets: </b><?php echo $vacationhouse['pets']; ?></p>	
-							<p><b>Price Per Night: </b><?php echo $vacationhouse['pricePerNight']; ?></p>	
-							<p><b>Price Per Week: </b><?php echo $vacationhouse['pricePerWeek']; ?></p>	
-							<p><b>Damage Deposit: </b><?php echo $vacationhouse['damageDeposit']; ?></p>	
+							<p><b>Minimum Stay: </b><?php echo $vacationhouse['minimum_stay']; ?></p>	
+							<p><b>Pets: </b><?php echo $vacationhouse['pets_allowed']; ?></p>	
+							<p><b>Price Per Night: </b><?php echo $vacationhouse['price_per_night']; ?></p>	
+							<p><b>Price Per Week: </b><?php echo $vacationhouse['price_per_week']; ?></p>	
+							<p><b>Damage Deposit: </b><?php echo $vacationhouse['damage_deposit']; ?></p>	
+							<a href="<?php echo base_url(); ?>Bookings/book"><button class="btn-primary">Price & Book</button></a>	
+						
 						</div>
 					</div>
 				</div>

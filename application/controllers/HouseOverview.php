@@ -43,7 +43,7 @@ class HouseOverview extends CI_Controller
                     if($this->form_validation->run() == true){
                         $insert = $this->vacationhouse->insert($vacation_homesData);
                         if($insert){
-                            redirect('HouseOverview/account');
+                            redirect('HouseOverview/succes');
                         }else{
                             $data['error_msg'] = 'Some problems occured, please try again.';
                         }
@@ -72,12 +72,17 @@ class HouseOverview extends CI_Controller
     	$this->load->view('HouseOverview/edit_vacationhouse');    
     }
 
-    public function account()
+    public function house()
     {
         $data = array();
-        $data['vacationhouse'] = $this->vacationhouse->getRows(array('id'=>$this->session->userdata('userId')));
+        $data['vacationhouse'] = $this->vacationhouse->get_owner_vaction_home();
         $this->load->view('houseOverview/vacationhouse', $data);
                
+    }
+
+    public function succes()
+    {
+        $this->load->view('Succes/succes');
     }
 
 }
