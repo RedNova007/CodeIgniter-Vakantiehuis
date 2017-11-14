@@ -8,7 +8,7 @@
     <!-- validation -->
 	<div class="grids">
 		<div class="progressbar-heading grids-heading"> 
-			<h2>Homes</h2>
+			<h2>Home</h2>
 		</div>
 		
 		<div class="forms-grids">
@@ -17,40 +17,27 @@
 				<div class="panel panel-widget agile-validation register-form">
 					<div class="validation-grids widget-shadow" data-example-id="basic-forms">
 						<div class="input-info">
-							<h3>Your vacationhomes</h3>
+							<h3>Your vacationhome</h3>
 						</div>
 						<div class="account-info">
 
 							<?php foreach ($vacationhouse as $vac ) 
 
-							{
-								 echo "Name: " , $vac['name'],  "<br>" ;	
-								 echo "Description: " , $vac['description'],  "<br>"  ;
-								 echo "Bedrooms: " , $vac['bedrooms'],  "<br>"  ;
-								 echo "Bathrooms: " , $vac['bathrooms'],  "<br>"  ;
-								 echo "Sleeps: " , $vac['sleeps'],  "<br>"  ;
-								 echo "Minimum Stay : " , $vac['minimum_stay'],  "<br>"  ;
-								 echo "Pets: " , $vac['pets_allowed'],  "<br>"  ;
-								 echo "Price Per Night: " , "€",$vac['price_per_night'],  "<br>"  ;
-								 echo "Price Per Week: " , "€",$vac['price_per_week'],  "<br>"  ;
-								 echo "Damage Deposit: " , "€",$vac['damage_deposit'],  "<br>"  ;
-								 echo "<br>";
+								{ ?>	
+														
+									<p><b>Name: </b><?php echo $vac['name']; ?></p>
+									<p><b>Description: </b><?php echo $vac['description']; ?></p>
+									<p><b>Bedrooms: </b><?php echo $vac['bedrooms']; ?></p>
+									<p><b>Bathrooms: </b><?php echo $vac['bathrooms']; ?></p>		
+									<p><b>Sleeps: </b><?php echo $vac['bathrooms']; ?></p>	
+									<p><b>Minimum Stay: </b><?php echo $vac['minimum_stay']; ?></p>	
+									<p><b>Pets: </b><?php echo $vac['pets_allowed']; ?></p>	
+									<p><b>Price Per Night: €</b><?php echo $vac['price_per_night']; ?></p>	
+									<p><b>Price Per Week: €</b><?php echo $vac['price_per_week']; ?></p>	
+									<p><b>Damage Deposit: €</b><?php echo $vac['damage_deposit']; ?></p>
+									<br>	
 
-																				
-							} ?>
-
-								<!-- <p><b>Name: </b><?php echo $vac['name']; ?></p>
-								<p><b>Description: </b><?php echo $vac['description']; ?></p>
-								<p><b>Bedrooms: </b><?php echo $vac['bedrooms']; ?></p>
-								<p><b>Bathrooms: </b><?php echo $vac['bathrooms']; ?></p>		
-								<p><b>Sleeps: </b><?php echo $vac['bathrooms']; ?></p>	
-								<p><b>Minimum Stay: </b><?php echo $vac['minimum_stay']; ?></p>	
-								<p><b>Pets: </b><?php echo $vac['pets_allowed']; ?></p>	
-								<p><b>Price Per Night: </b><?php echo $vac['price_per_night']; ?></p>	
-								<p><b>Price Per Week: </b><?php echo $vac['price_per_week']; ?></p>	
-								<p><b>Damage Deposit: </b><?php echo $vac['damage_deposit']; ?></p>		--> 
-							
-							<a href="<?php echo base_url(); ?>Bookings/book"><button class="btn-primary">Price & Book</button></a>	
+							<?php } ?>		
 						
 						</div>
 					</div>

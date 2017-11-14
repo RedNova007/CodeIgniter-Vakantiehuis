@@ -63,13 +63,6 @@ class Vacationhouse extends CI_Model{
         }
     }
 
-    public function get_vacation_homes()
-    {
-        $query = $this->db->get('vacation_homes');
-
-        return $query->result_array();
-    }
-
     public function get_owner_vaction_home($data = array())
     {
         

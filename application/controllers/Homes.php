@@ -18,4 +18,12 @@ class Homes extends CI_Controller {
     	$this->load->view('_templates/header');
     	$this->load->view('homes/vacation_homes', $data);
     }
+
+    public function houseOverview()
+    {
+        $data = array();
+        $homeId = $_GET ['id'];
+        $data['vacationhouse'] = $this->Homes_model->get_vacationhome_info($homeId);
+        $this->load->view('homes/home', $data);
+    }
 }
