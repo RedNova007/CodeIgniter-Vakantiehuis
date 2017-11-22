@@ -398,3 +398,15 @@ p.footInfo{color: #fff;margin-top: 10px;font-size: 18px;}
 	
 }
 /*--//responsive--*/
+
+.vakantiehuis_info{
+width: 35%;
+color:white;
+margin-left:25%;
+height: auto;
+}
+
+.account-info img{
+	float:left;
+	max-width: 200px;
+}	
