@@ -76,8 +76,7 @@ class Vacationhouse extends CI_Model{
         $userId = $this->session->userdata('userId');   
         $where = $this->db->where('owner_id', $userId);
         $query = $this->db->get('vacation_homes');
-        $result = $query->row_array();
-        
+        $result = $query->result_array();
         
         return $result;
     }

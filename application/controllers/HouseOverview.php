@@ -38,6 +38,7 @@ class HouseOverview extends CI_Controller
                         'country_id' => strip_tags($this->input->post('country_id')),
                         'bedrooms' => strip_tags($this->input->post('bedrooms')),
                         'bathrooms' => strip_tags($this->input->post('bathrooms')),
+                        'sleeps' => strip_tags($this->input->post('sleeps')),
                     );
 
                     if($this->form_validation->run() == true){
