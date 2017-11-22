@@ -17,14 +17,18 @@
 				<div class="panel panel-widget agile-validation register-form">
 					<div class="validation-grids widget-shadow" data-example-id="basic-forms">
 						<div class="input-info">
-							<h3>Your vacationhome</h3>
-						</div>
+							<h3>Your vacationhomes</h3>
+						</div><br><br>
+						
+						
+
 						<div class="account-info">
 
 							<?php foreach ($vacationhouse as $vac ) 
 
 								{ ?>	
-														
+									<?php echo '<img src="data:image/jpeg;base64,'.base64_encode($vac['thumbnail']) .'" />';?>
+									<div class="vakantiehuis_info">			
 									<p><b>Name: </b><?php echo $vac['name']; ?></p>
 									<p><b>Description: </b><?php echo $vac['description']; ?></p>
 									<p><b>Bedrooms: </b><?php echo $vac['bedrooms']; ?></p>
@@ -35,7 +39,8 @@
 									<p><b>Price Per Night: €</b><?php echo $vac['price_per_night']; ?></p>	
 									<p><b>Price Per Week: €</b><?php echo $vac['price_per_week']; ?></p>	
 									<p><b>Damage Deposit: €</b><?php echo $vac['damage_deposit']; ?></p>
-									<br>	
+									<br><br><br><br>
+									</div>	
 
 							<?php } ?>		
 						
