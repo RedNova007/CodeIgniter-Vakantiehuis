@@ -11,10 +11,13 @@ class Search extends CI_Controller {
 
      public function results() 
     {
-    	//$data = array();
-    	//$data['query'] = $this->search_model->search();
+    	$data = array();
+
+    	$search = $this->input->post('query');
+
+        $data['search'] =  $this->search_model->search($search);
 
     	$this->load->view('_templates/header');
-    	$this->load->view('search/results');
+    	$this->load->view('search/results', $data);
     }
 }

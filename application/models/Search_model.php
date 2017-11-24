@@ -6,10 +6,13 @@ class Search_model extends CI_Model {
         $this->load->database();
     }
 
-    public function search()
+    public function search($search)
     {
-        $query = $this->db->get('vacation_homes');
+        $this->db->select('*');
+        $this->db->from('vacation_homes');
+        $this->db->like('name', $search);
 
-        return $query->result_array();
+        $query = $this->db->get();
+    	return $query->result();
     }
 }

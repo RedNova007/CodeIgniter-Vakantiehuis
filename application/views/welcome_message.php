@@ -17,9 +17,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="search">
 			<form  method="post" action="search/results"  method="POST"> 
 				<input type="text2" name="query" placeholder="Search..">
-				<input type="text3" name="query" placeholder="From">
-				<input type="text3" name="query" placeholder="Until">
-				<input type="text3" name="query" placeholder="Guests">
+				<input type="text3" name="query2" placeholder="From">
+				<input type="text3" name="query3" placeholder="Until">
+				<input type="text3" name="query4" placeholder="Guests">
 				<input type="submit" name="go" value="Search">
 			</form>
 		</div>
