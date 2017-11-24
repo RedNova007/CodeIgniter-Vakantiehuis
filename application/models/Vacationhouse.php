@@ -50,6 +50,8 @@ class Vacationhouse extends CI_Model{
             $data['modified'] = date("Y-m-d H:i:s");
         }
         
+        $data['owner_id'] = $this->session->userdata('userId');
+
         //insert user data to users table
         $insert = $this->db->insert($this->vacation_homesTBL, $data);
         
@@ -61,6 +63,14 @@ class Vacationhouse extends CI_Model{
         }
     }
 
-
-
+    public function get_owner_vaction_home($data = array())
+    {
+        
+        $userId = $this->session->userdata('userId');   
+        $where = $this->db->where('owner_id', $userId);
+        $query = $this->db->get('vacation_homes');
+        $result = $query->result_array();
+        
+        return $result;
+    }
 }
