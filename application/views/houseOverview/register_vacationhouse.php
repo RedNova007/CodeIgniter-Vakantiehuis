@@ -31,12 +31,12 @@
 								</div>		
 							<br />			
 								<div class="form-group has-feedback">
-									<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" name="price_per_night" placeholder="Price per night &euro;" data-error="Price per night is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
+									<input type="text" onkeydown="return event.which >= 8 && event.which <= 57" class="form-control" name="price_per_night" placeholder="Price per night &euro;" data-error="Price per night is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
 									<?php echo form_error('price_per_night','<span class="help-block">','</span>'); ?>
 								</div>		
 							<br />
 								<div class="form-group has-feedback">
-									<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" name="price_per_week" placeholder="Price per week &euro;" data-error="Price per week is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
+									<input type="text" onkeydown="return event.which >= 8 && event.which <= 57" class="form-control" name="price_per_week" placeholder="Price per week &euro;" data-error="Price per week is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
 									<?php echo form_error('price_per_night','<span class="help-block">','</span>'); ?>
 								</div>		
 							<br />							
@@ -408,10 +408,29 @@
 									</select>	
 								</div>
 							<br />
+							<div class="selectbox">
+									Sleeps:<br />
+									<select name="sleeps" value="sleeps" required="">
+										<option value="0">0</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+										<option value="10+">10+</option>
+									</select>	
+								</div>
+								
 				<!-- 			<div class="form-group">
 									Tumbnail:<br />
 									<input type="file" name="fileupload" value="fileupload" id="fileupload"> <label for="fileupload"> Select a file to upload</label></form>	
 								</div>	
+
 				 -->		<br />									
 								<div class="form-group">
 									<input type="submit" name="regisHomeSubmit" class="btn-primary" value="Submit"/>

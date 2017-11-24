@@ -10,7 +10,7 @@
 		<table>
 		  <tr>
 		    <th>Name</th>
-		    <th>Guests</th>
+		    <th>Guests</th>		    
 		    <th>Bedrooms</th>
 		    <th>Bathrooms</th>
 		    <th>Price per night</th>
@@ -22,7 +22,11 @@
 			?>
 				<tr>
 					<td>
-						<?=$vacation_home['name']?>
+					<a href="<?php echo base_url(); ?>Homes/houseOverview?id=<?php echo($vacation_home['id'])?>"> <?=$vacation_home['name']?> </a>
+					<?php 
+		
+
+					?>
 					</td>
 					<td>
 						<?=$vacation_home['sleeps']?>
@@ -34,10 +38,10 @@
 						<?=$vacation_home['bathrooms']?>
 					</td>
 					<td>
-						<?=$vacation_home['price_per_night']?>
-					</td>
+						€<?=$vacation_home['price_per_night']?>
+					</td> 
 					<td>
-						<?=$vacation_home['price_per_week']?>
+						€<?=$vacation_home['price_per_week']?>
 					</td>
 				</tr>
 			<?php
