@@ -30,7 +30,7 @@
 									<?php echo form_error('email','<span class="help-block">','</span>'); ?>
 								</div>
 								<div class="form-group valid-form">
-									<input type="text" onkeypress='return event.charCode >= 48 && event.charCode <= 57' class="form-control" name="phone" placeholder="06123456789" required="" value="<?php echo !empty($user['phone'])?$user['phone']:''; ?>">
+									<input type="text" onkeydown="return event.which >= 8 && event.which <= 57" class="form-control" name="phone" placeholder="06123456789" required="" value="<?php echo !empty($user['phone'])?$user['phone']:''; ?>">
 								</div>
 								<div class="form-group">
 								  <input type="password" class="form-control inputPassword" name="password" placeholder="Password" required="">
