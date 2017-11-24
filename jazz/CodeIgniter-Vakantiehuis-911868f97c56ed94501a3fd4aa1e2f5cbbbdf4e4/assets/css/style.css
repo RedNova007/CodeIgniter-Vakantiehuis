@@ -1,0 +1,212 @@
+.header{
+	width: 100%;
+	background-color: white;
+	padding-top: 20px;
+	padding-bottom: 25px;
+	z-index: 100;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	box-shadow: 5px;
+}
+
+.footer{
+	text-align: center
+}
+
+.container{
+	z-index: 1;
+	background-color: orange;
+	float: left;
+	margin: 0 auto;
+}
+
+.listcontainer{
+	z-index: 1;
+	background-color: orange;
+	margin: 0 auto;
+}
+
+.logo{
+	float: left;
+	width: 25%;
+}
+
+.navigation{
+	margin: 0 auto;
+	width: 200px;
+}
+
+.homepage_picture{
+	max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8*/ 
+    float: left;
+    position: relative;
+    background: no-repeat center center fixed;
+}
+
+.search{
+	float: left;
+	position: absolute;
+	z-index: 1000;
+	/*margin-top: 260px;
+	margin-left: 250px;*/
+	top: 30%;
+	left: 25%;
+}
+
+input[type="text2"], textarea {
+	outline: none;
+	box-shadow:none !important;
+	border:1px solid orange !important;
+}
+
+input[type=text2] {
+    width: 200px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    background-image: url('icons/search.jpg');
+    background-position: 5px 12px; 
+    background-repeat: no-repeat;
+    padding: 16px 8px 16px 32px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type="text3"], textarea {
+	outline: none;
+	box-shadow:none !important;
+	border:1px solid orange !important;
+}
+
+input[type=text3] {
+    width: 200px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    padding: 16px 8px 16px 32px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#homepage_offers {
+	margin-left: 15px;
+	margin-left: 250px;
+	margin-bottom: 30px;
+}
+
+.offers{
+	background-color: white; 
+	float: left;
+    position: relative;
+    width: 300px;
+    height: 242px;
+    margin: 15px;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+p{
+	font-family: 'Roboto', sans-serif;
+	font-weight: medium;
+}
+
+h1{
+	font-family: 'Roboto', sans-serif;
+	font-weight: thin;
+}
+
+h5{
+	text-decoration: initial;
+	color: rgba(215, 40, 40, 0.9);
+}
+
+li{
+	display: inline;
+	margin-left: 10px;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+ul li a{
+	color: black;
+	text-decoration: none;
+}
+
+ul li a:hover{
+	color: orange;
+}
+
+h3{
+	font-family: Arial;
+}
+
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th{
+	background-color: orange;
+    color: white;
+}
+
+th, td {
+	font-family: 'Roboto', sans-serif;
+    padding: 15px;
+}
+
+.offer_sleeps{
+	float: left;
+	padding-left: 25px;
+	padding-right: 20px;
+	background: url('icons/guests.png') no-repeat;
+}
+
+.offer_bedrooms{
+	float: left;
+	padding-left: 25px;
+	padding-right: 20px;
+	background: url('icons/sleeps.png')no-repeat;
+}
+
+.offer_bathrooms{
+	float: left;
+	padding-left: 25px;
+	padding-right: 20px;
+	background: url('icons/bathtub.png')no-repeat;
+}
+
+.all_homes{
+	float: right;
+	margin-top: 250px;
+	margin-right: 10px;
+}
+
+.all_homes a{
+	font-family: 'Roboto', sans-serif;
+	color: black;
+	text-decoration: none;
+}
+
+.all_homes a:hover{
+	color: white;
+}
+
+.offer_info{
+	font-family: 'Roboto', sans-serif;
+	color: black;
+	padding-left: 5px;
+}

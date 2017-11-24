@@ -51,7 +51,7 @@ class HouseOverview extends CI_Controller
                 }
                 $data['Vacationhouse'] = $vacation_homesData;
                 //load the view
-                $this->load->view('HouseOverview/register_vacationhouse', $data);    
+                $this->load->view('houseOverview/register_vacationhouse', $data);    
 
             }
 
