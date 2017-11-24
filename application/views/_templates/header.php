@@ -10,7 +10,5 @@
 	            <a class="topmenu" href="<?php echo base_url(); ?>users/registration">Register</a></li> 
 	        <li>
 	            <a class="topmenu" href="<?php echo base_url(); ?>users/login">Login</a></li>
-	        <!--<li>
-	        	<a class="topmenu" href="<?php echo base_url(); ?>users/account">Account</a></li>-->
     </ul>
 </div>

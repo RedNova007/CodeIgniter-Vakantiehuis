@@ -38,13 +38,12 @@ class HouseOverview extends CI_Controller
                         'country_id' => strip_tags($this->input->post('country_id')),
                         'bedrooms' => strip_tags($this->input->post('bedrooms')),
                         'bathrooms' => strip_tags($this->input->post('bathrooms')),
-                        'sleeps' => strip_tags($this->input->post('sleeps')),
                     );
 
                     if($this->form_validation->run() == true){
                         $insert = $this->vacationhouse->insert($vacation_homesData);
                         if($insert){
-                            redirect('HouseOverview/succes');
+                            redirect('HouseOverview/account');
                         }else{
                             $data['error_msg'] = 'Some problems occured, please try again.';
                         }
@@ -70,20 +69,15 @@ class HouseOverview extends CI_Controller
     public function edit()
     {
 
-    	$this->load->view('houseOverview/edit_vacationhouse');    
+    	$this->load->view('HouseOverview/edit_vacationhouse');    
     }
 
-    public function house()
+    public function account()
     {
         $data = array();
-        $data['vacationhouse'] = $this->vacationhouse->get_owner_vaction_home();
+        $data['vacationhouse'] = $this->vacationhouse->getRows(array('id'=>$this->session->userdata('userId')));
         $this->load->view('houseOverview/vacationhouse', $data);
                
-    }
-
-    public function succes()
-    {
-        $this->load->view('Succes/succes');
     }
 
 }
