@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container">
 	<div class="image">
 		<div class="search">
-			<form  method="post" action="index.php/search/results"  method="POST"> 
+			<form  method="post" action="search/results"  method="POST"> 
 				<input type="text2" name="query" placeholder="Search..">
 				<input type="date" name="query2" placeholder="From">
 				<input type="date" name="query3" placeholder="Until">
