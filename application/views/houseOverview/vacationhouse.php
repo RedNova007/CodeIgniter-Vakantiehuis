@@ -19,9 +19,6 @@
 						<div class="input-info">
 							<h3>Your vacationhomes</h3>
 						</div><br><br>
-						
-						
-
 						<div class="account-info">
 
 							<?php foreach ($vacationhouse as $vac ) 
