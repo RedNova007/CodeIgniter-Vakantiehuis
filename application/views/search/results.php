@@ -10,9 +10,9 @@
         <tr>
             <th>Name</th>
         </tr>
-	   <?php foreach($search as $search_results){ ?>
+	   <?php foreach($searchResults as $searchResult){ ?>
         <tr>
-            <td><?php echo $search_results->name?></td>
+            <td><?php echo $searchResult->name?></td>
         </tr>
         <?php } ?>
     </table>

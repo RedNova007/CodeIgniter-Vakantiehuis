@@ -15,10 +15,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container">
 	<div class="image">
 		<div class="search">
-			<form  method="post" action="search/results"  method="POST"> 
+			<form  method="post" action="index.php/search/results"  method="POST"> 
 				<input type="text2" name="query" placeholder="Search..">
-				<input type="text3" name="query2" placeholder="From">
-				<input type="text3" name="query3" placeholder="Until">
+				<input type="date" name="query2" placeholder="From">
+				<input type="date" name="query3" placeholder="Until">
 				<input type="text3" name="query4" placeholder="Guests">
 				<input type="submit" name="go" value="Search">
 			</form>
@@ -44,6 +44,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 					<div class="offer_bathrooms">
 						<p><?=	$vacation_home['bathrooms']?></p>
+					</div>
+					<div class="offer_price">
+						<p>€<?= $vacation_home['price_per_night']?>/night</p>
 					</div>
 				</p>
 			</div>

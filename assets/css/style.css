@@ -94,6 +94,24 @@ input[type=text3] {
     transition: width 0.4s ease-in-out;
 }
 
+input[type="date"], textarea {
+	outline: none;
+	box-shadow:none !important;
+	border:1px solid orange !important;
+}
+
+input[type=date] {
+    width: 220px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    padding: 16px 8px 16px 32px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
 #homepage_offers {
 	margin-left: 15px;
 	margin-left: 250px;
@@ -193,6 +211,12 @@ th, td {
 	float: right;
 	margin-top: 250px;
 	margin-right: 10px;
+}
+
+.offer_price{
+	float: left;
+	padding-left: 20px;
+	padding-right: 15px;
 }
 
 .all_homes a{
