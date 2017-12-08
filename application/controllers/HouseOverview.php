@@ -83,7 +83,7 @@ class HouseOverview extends CI_Controller
 
     public function succes()
     {
-        $this->load->view('Succes/succes');
+        $this->load->view('succes/succes');
     }
 
 }
