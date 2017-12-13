@@ -10,7 +10,7 @@
 		<div class="progressbar-heading grids-heading">
 			<h2>User Registration</h2>
 		</div>
-		
+		 
 		<div class="forms-grids">
 			<div class="forms3">
 			<div class="w3agile-validation w3ls-validation">
@@ -22,23 +22,34 @@
 						<div class="form-body form-body-info">
 							<form action="" method="post">					
 								<div class="form-group valid-form">
-									<input type="text" class="form-control" name="name" placeholder="Name" required="" value="<?php echo !empty($user['name'])?$user['name']:''; ?>">
+									<p class="regi_form"> Name * </p>
+									<input type="text" class="form-control" name="name" placeholder="Your name" required="" value="<?php echo !empty($user['name'])?$user['name']:''; ?>">
+									<button class="regi_button" title="Insert your full name, for example 'Jan de vries'.">!</button>
 									<?php echo form_error('name','<span class="help-block">','</span>'); ?>
+
 								</div>
 								<div class="form-group has-feedback">
+									<p class="regi_form"> Email * </p>
 									<input type="email" class="form-control inputEmail" name="email" placeholder="Example@gmail.com" data-error="That email address is invalid" required="" value="<?php echo !empty($user['email'])?$user['email']:''; ?>">
+									<button class="regi_button" title="Insert your email, for example 'Jandevries@gmail.com'.">!</button>
 									<?php echo form_error('email','<span class="help-block">','</span>'); ?>
 								</div>
 								<div class="form-group valid-form">
+									<p class="regi_form"> Phonenumber * </p>
 									<input type="text" onkeydown="return event.which >= 8 && event.which <= 57" class="form-control" name="phone" placeholder="06123456789" required="" value="<?php echo !empty($user['phone'])?$user['phone']:''; ?>">
+									<button class="regi_button" title="Insert your phonenumber, for example '06123456789'.">!</button>
 								</div>
 								<div class="form-group">
+									<p class="regi_form"> Password * </p>
 								  <input type="password" class="form-control inputPassword" name="password" placeholder="Password" required="">
+								  <button class="pw_button" title="Insert your password.">!</button>
 								  <?php echo form_error('password','<span class="help-block">','</span>'); ?>
 								</div>
 								<div class="form-group">
 								  <input type="password" class="form-control" data-match=".inputPassword" data-match-error="Whoops, these don't match" name="conf_password" placeholder="Confirm password" required="">
+								  <button class="pwcf_button" title="This is an input where you comfirm your password.">!</button>
 								  <?php echo form_error('conf_password','<span class="help-block">','</span>'); ?>
+								  <br>
 								</div>
 								<div class="form-group">
 									<?php

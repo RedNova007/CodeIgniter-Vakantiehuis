@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 /**
-* 
+*  
 */
 class HouseOverview extends CI_Controller
 {
@@ -10,7 +10,7 @@ class HouseOverview extends CI_Controller
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model('vacationhouse');
-        
+         
     }
 
     public function register()
@@ -77,8 +77,8 @@ class HouseOverview extends CI_Controller
     {
         $data = array();
         $data['vacationhouse'] = $this->vacationhouse->get_owner_vaction_home();
-        $this->load->view('houseOverview/vacationhouse', $data);
-               
+        $this->load->view('houseOverview/vacationhouse', $data);   
+
     }
 
     public function succes()

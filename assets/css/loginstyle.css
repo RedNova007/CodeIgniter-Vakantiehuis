@@ -191,7 +191,7 @@ body {
 	min-height: 799px;
 }
 .form-control {
-    display: block;
+    display: inline-block;
     width: 96%;
     height: 34px;
     padding: 6px 12px;
@@ -209,6 +209,7 @@ body {
     -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
     /* transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s; */
     border: none;
+    position: relative;
 }
 .radio label, .checkbox label {
     color: rgba(236, 242, 243, 0.47);
@@ -410,3 +411,32 @@ height: auto;
 	float:left;
 	max-width: 200px;
 }	
+.regi_form{
+	color: white;
+}
+.regi_button{
+	position: absolute;
+	padding: 11px;
+}
+.pw_button{
+	position: absolute;
+	padding: 11px;
+	margin-top: 10px;
+}
+.pwcf_button{
+	position: absolute;
+	padding: 11px;
+}
+
+.container{
+	height: 200px;
+	padding: 0;	
+	position: relative;
+}
+
+#myCarousel{
+	overflow: hidden;
+	height: 200px;
+	position: absolute;
+	right: calc(0px);
+}
