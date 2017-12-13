@@ -29,10 +29,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php
 		foreach ($vacation_homes as $vacation_home)
 		{
-	?>		
-		<div id="homepage_offers">
-			<div class="offers">
-				
+	?>
+		<div class="offers">
 				<img src="data:image/jpeg;base64,<?php echo base64_encode($vacation_home['thumbnail']); ?>"/>
 				<p class="offer_info">
 					<?= $vacation_home['name']; ?><br>
@@ -50,7 +48,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 				</p>
 			</div>
-		</div><br>
+		<br>
 	<?php
 		}	
 	?>
