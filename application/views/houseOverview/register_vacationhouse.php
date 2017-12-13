@@ -5,7 +5,7 @@
 </head>
 <body>
 <div class="container">
-    <!-- validation -->
+    <!-- validation --> 
 	<div class="grids">
 		<div class="progressbar-heading grids-heading">
 			<h2>Vacationhouse Registration</h2>
@@ -22,26 +22,33 @@
 						<div class="form-body form-body-info">
 							<form action="" method="post">
 								<div class="form-group valid-form">
+									<p class="regi_form"> Name * </p>
 									<input type="text" class="form-control" name="name" maxlength="30" placeholder="Name Vacationhouse" required="" value="<?php echo !empty($vacationhouse['name'])?$vacationhouse['name']:''; ?>">
+									<button class="regi_button" title="Insert the name for your vacationhouse, for example 'Villa la dans'.">!</button>
 									<?php echo form_error('name','<span class="help-block">','</span>'); ?>
 								</div>
 								<div class="form-group has-feedback">
+									<p class="regi_form"> Description</p>
 									<input type="text" cols="250" class="form-control" name="description" maxlength="200" placeholder="Description" data-error="Description is invalid" required="" value="<?php echo !empty($vacationhouse['description'])?$vacationhouse['description']:''; ?>">
 									<?php echo form_error('description','<span class="help-block">','</span>'); ?>
 								</div>		
 							<br />			
 								<div class="form-group has-feedback">
+									<p class="regi_form"> Price per night * </p>
 									<input type="text" onkeydown="return event.which >= 8 && event.which <= 57" class="form-control" name="price_per_night" placeholder="Price per night &euro;" data-error="Price per night is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
+									<button class="regi_button" title="Insert the price per night.">!</button>
 									<?php echo form_error('price_per_night','<span class="help-block">','</span>'); ?>
 								</div>		
 							<br />
 								<div class="form-group has-feedback">
+									<p class="regi_form"> Price per week * </p>
 									<input type="text" onkeydown="return event.which >= 8 && event.which <= 57" class="form-control" name="price_per_week" placeholder="Price per week &euro;" data-error="Price per week is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
+									<button class="regi_button" title="Insert the price per week.">!</button>
 									<?php echo form_error('price_per_night','<span class="help-block">','</span>'); ?>
 								</div>		
 							<br />							
 								<div class="form-group">
-									Pets allowed?
+									<p class="regi_form">Pets allowed</p>
 										<?php
 										if(!empty($vacationhouse['Pets']) && $vacationhouse['Pets'] == 'Yes'){
 											$fcheck = 'checked="checked"';
@@ -53,21 +60,21 @@
 										?>
 										<div class="radio">
 											<label>
-											<input type="radio" name="pets_allowed" value="Yes" <?php echo $mcheck; ?>>
+											<input type="radio" name="pets_allowed" value="Yes" style="color: white;"<?php echo $mcheck; ?>>
 											Yes
 											</label>
 										</div>
 										<div class="radio">
 											<label>
-											  <input type="radio" name="pets_allowed" value="No" <?php echo $fcheck; ?>>
+											  <input type="radio" name="pets_allowed" value="No" style="color: white;"<?php echo $fcheck; ?>>
 											  No
 											</label>
 										</div>
 								</div>
 							<br />
 								<div class="selectbox">
-									Damage deposit:<br />
-									<select name="damage_deposit" value="damage_deposit" required="">
+									<p class="regi_form">Damage deposit:</p>
+										<select name="damage_deposit" value="damage_deposit" required="">
 										<option value="0">&euro;0</option>
 										<option value="10">&euro;10</option>
 										<option value="25">&euro;25</option>
@@ -96,7 +103,7 @@
 								</div>
 							<br />	
 								<div class="selectbox">
-									Minimum stay:<br />
+									<p class="regi_form">Minimum stay:</p>
 									<select name="minimum_stay" value="minimum_stay" required="">
 										<option value="0">0 Day</option>
 										<option value="1">1 Day</option>
@@ -123,7 +130,7 @@
 								</div>
 							<br />						
 								<div class="selectbox">
-									Country:<br />
+									<p class="regi_form">Country:</p>
 									<select name="country_id" value="country_id"  required="">
 										<option value="4">Afghanistan</option>
 										<option value="248">Åland Islands</option>
@@ -378,7 +385,7 @@
 								</div>
 							<br />
 								<div class="selectbox">
-									Bedrooms:<br />
+									<p class="regi_form">Bedrooms:</p>
 									<select name="bedrooms" value="bedrooms" required="">
 										<option value="0">0</option>
 										<option value="1">1</option>
@@ -396,7 +403,7 @@
 								</div>
 							<br />
 								<div class="selectbox">
-									Bathrooms:<br />
+									<p class="regi_form">Bathrooms:</p>
 									<select name="bathrooms" value="bathrooms"  required="">
 										<option value="0">0</option>
 										<option value="1">1</option>
@@ -409,7 +416,7 @@
 								</div>
 							<br />
 							<div class="selectbox">
-									Sleeps:<br />
+									<p class="regi_form">Sleeps:</p>
 									<select name="sleeps" value="sleeps" required="">
 										<option value="0">0</option>
 										<option value="1">1</option>
