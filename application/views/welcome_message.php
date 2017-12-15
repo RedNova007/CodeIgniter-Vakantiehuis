@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<input type="text2" name="query" placeholder="Search..">
 				<input type="date" name="query2" placeholder="From">
 				<input type="date" name="query3" placeholder="Until">
-				<input type="text3" name="query4" placeholder="Guests">
+				<input type="number" name="query4" placeholder="Guests">
 				<input type="submit" name="go" value="Search">
 			</form>
 		</div>

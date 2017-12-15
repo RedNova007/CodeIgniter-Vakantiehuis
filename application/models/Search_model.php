@@ -6,7 +6,7 @@ class Search_model extends CI_Model {
         $this->load->database();
     }
 
-    public function search($nameQuery = null, $dateQuery = null, $dateQuery2 = null)
+    public function search($nameQuery = null, $dateQuery = null, $dateQuery2 = null, $guestQuery = null)
     {
      //    $this->db->select('*');
      //    $this->db->from('vacation_homes');
@@ -51,13 +51,17 @@ class Search_model extends CI_Model {
             //$this->db->where("arrival <=", $dateQuery);
             //$this->db->where("departure >=", $dateQuery2);
 
-            $where = "NOT (arrival > '$dateQuery' OR departure < '$dateQuery2')";
-            $this->db->where($where);
+            $sql = "SELECT * FROM vacation_homes WHERE id NOT IN(SELECT vacation_homes.id FROM vacation_homes JOIN booking ON vacation_homes.id = booking.vacation_home_id WHERE (arrival <= ? AND departure >= ?) OR (arrival BETWEEN ? AND ?))";
+            $this->db->query($sql, array($dateQuery, $dateQuery2, $dateQuery, $dateQuery2));
 
             //WHERE NOT (arrival > $dateQuery2 OR departure < $dateQuery)
         }
 
-        $query = $this->db->get(); //weergeef welke hoger is dan arrivalquery en welke lager is dan departurequery (tussenin)
+        if ($guestQuery != null) {
+            $this->db->like('vacation_homes.sleeps', $guestQuery);
+        }
+
+        $query = $this->db->get(); 
         return $query->result();
     }
 }
