@@ -1,6 +1,8 @@
-<?php 
-defined('BASEPATH') OR exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+/**
+* 
+*/
 class Booking extends CI_Controller {
 
 	public function __construct()
@@ -12,16 +14,10 @@ class Booking extends CI_Controller {
 
     public function index() 
     {
-		if($this->session->userdata('isUserLoggedIn')){
-
-            
-            
-           
-            
                 $data = array();
                 $bookingData = array();
-                if($this->input->post('regisHomeSubmit')){
-                	$this->form_validation->set_rules('name', 'Name', 'required');
+                if($this->input->post('bookingSubmit')){
+                	$this->form_validation->set_rules('booking_name', 'Name', 'required');
 
                     $bookingData = array(
                         'booking_name' => strip_tags($this->input->post('booking_name')),
@@ -38,24 +34,25 @@ class Booking extends CI_Controller {
                     if($this->form_validation->run() == true){
                         $insert = $this->Booking_model->insert($bookingData);
                         if($insert){
-                            redirect('booking/succes');
+                            redirect('booking/Succes');
                         }else{
                             $data['error_msg'] = 'Some problems occured, please try again.';
                         }
                     }
                 }
-                $data['Booking_model'] = $bookingData;
+                $data['Booking'] = $bookingData;
                 //load the view
-                $this->load->view('booking/Booking_Form', $data);    
-
-            }
-
-            else{
-                 $this->load->view('Errors/index.html');
-            }
-        
+                $this->load->view('booking/Booking_Form', $data);         
 
    
         
-    } 
+    }
+
+
+    public function succes()
+    {
+        $this->load->view('booking/Booking_Succes');
+
+    }   
+
 }

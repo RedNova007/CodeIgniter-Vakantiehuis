@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Booking_model extends CI_Model{
     function __construct() {
-        $this->bookingTBL = 'Booking';
+        $this->bookingTBL = 'booking';
     }
 
 
@@ -49,8 +49,6 @@ class Booking_model extends CI_Model{
         if(!array_key_exists("modified", $data)){
             $data['modified'] = date("Y-m-d H:i:s");
         }
-        
-        $data['owner_id'] = $this->session->userdata('userId');
 
         //insert user data to users table
         $insert = $this->db->insert($this->bookingTBL, $data);
