@@ -10,7 +10,8 @@
 		<div class="progressbar-heading grids-heading"> 
 			<h2>Home</h2>
 		</div>
-		
+		<?php 
+		 ?>
 		<div class="forms-grids">
 			<div class="forms3">
 			<div class="w3agile-validation w3ls-validation">
@@ -30,7 +31,7 @@
 							<p><b>Price Per Week: €</b><?php echo $vacationhouse['price_per_week']; ?></p>	
 							<p><b>Damage Deposit: €</b><?php echo $vacationhouse['damage_deposit']; ?></p>		
 							<a href="<?php echo base_url(); ?>Score/reviews"><button class="btn-primary">Score & Reviews</button></a>						
-							<a href="<?php echo base_url(); ?>Bookings/book"><button class="btn-primary">Price & Book</button></a>							
+							<a href="<?php echo base_url(); ?> Booking/index?id=<?php echo($vacationhouse['id'])?>"><button class="btn-primary">Price & Book</button></a>							
 						</div>
 					</div>
 				</div>
