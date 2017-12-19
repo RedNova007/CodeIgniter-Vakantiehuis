@@ -112,12 +112,6 @@ input[type=date] {
     transition: width 0.4s ease-in-out;
 }
 
-#homepage_offers {
-	margin-left: 15px;
-	margin-left: 250px;
-	margin-bottom: 30px;
-}
-
 .offers{
 	background-color: white; 
 	float: left;
@@ -126,6 +120,7 @@ input[type=date] {
     height: 242px;
     margin: 15px;
     border: 1px solid rgba(0, 0, 0, .2);
+    margin-left: 50px;
 }
 
 p{
@@ -209,7 +204,6 @@ th, td {
 
 .all_homes{
 	float: right;
-	margin-top: 250px;
 	margin-right: 10px;
 }
 
