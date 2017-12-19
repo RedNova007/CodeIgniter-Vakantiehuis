@@ -18,17 +18,6 @@ class Search extends CI_Controller {
         $dateQuery2 = $this->input->post('query3');
         $guestQuery = $this->input->post('query4');
 
-        //$data['search'] =  $this->search_model->search($search);
-        //$data['dateQuery'] =  $this->search_model->search($dateQuery);
-        //$data2['dateQuery2'] = $this->search_model->search($dateQuery2);
-
-        //$data = array_merge($dateQuery, $dateQuery2);
-
-        var_dump($nameQuery);
-        var_dump($dateQuery);
-        var_dump($dateQuery2);
-        var_dump($guestQuery);
-
         $data['searchResults'] = $this->search_model->search($nameQuery, $dateQuery, $dateQuery2, $guestQuery);
 
     	$this->load->view('_templates/header');
