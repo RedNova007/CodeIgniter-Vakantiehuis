@@ -12,14 +12,16 @@ class Booking extends CI_Controller {
         $this->load->model('Booking_model');
     }
 
+
     public function index() 
-    {
+    { 
                 $data = array();
                 $bookingData = array();
                 if($this->input->post('bookingSubmit')){
                 	$this->form_validation->set_rules('booking_name', 'Name', 'required');
 
                     $bookingData = array(
+                        'vacation_home_id' => strip_tags($this->input->post('vacation_home_id')),
                         'booking_name' => strip_tags($this->input->post('booking_name')),
                         'booking_email' => strip_tags($this->input->post('booking_email')),
                         'booking_guests' => strip_tags($this->input->post('booking_guests')),
@@ -42,10 +44,7 @@ class Booking extends CI_Controller {
                 }
                 $data['Booking'] = $bookingData;
                 //load the view
-                $this->load->view('booking/Booking_Form', $data);         
-
-   
-        
+                $this->load->view('booking/Booking_Form', $data);
     }
 
 

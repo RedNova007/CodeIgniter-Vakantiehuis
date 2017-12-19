@@ -1,3 +1,5 @@
+<?php $id = $_GET ['id']; ?>
+
 <!DOCTYPE html>
 <html lang="en">  
 <head>
@@ -8,9 +10,9 @@
     <!-- validation -->
   <div class="grids">
     <div class="progressbar-heading grids-heading">
+      
       <h2>Booking:</h2>
     </div>
-    
     <div class="forms-grids">
       <div class="forms3">
       <div class="w3agile-validation w3ls-validation">
@@ -20,7 +22,11 @@
               <h3></h3>
             </div>
             <div class="form-body form-body-info">
-              <form action="" method="post">
+              <form action="" method="post">  
+                <div class="form-group valid-form">
+                  <input type="hidden" class="form-control" name="vacation_home_id" maxlength="30" placeholder="" required="" value="<?php echo "$id"; ?>" 
+                  <?php echo form_error('vacation_home_id','<span class="help-block">','</span>'); ?>
+                </div>
                 Name *
                 <div class="form-group valid-form">
                   <input type="text" class="form-control" name="booking_name" maxlength="30" placeholder="First Name/Last Name" required="" value="<?php echo !empty($Booking['booking_name'])?$Booking['booking_name']:''; ?>">
