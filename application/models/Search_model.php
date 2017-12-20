@@ -32,36 +32,34 @@ class Search_model extends CI_Model {
 
         //SELECT * FROM booking WHERE arrival <= `2017-12-15 00:00:00` AND departure >= `2017-12-20 00:00:00`
 
-        $this->db->distinct();
-        $this->db->select('vacation_homes.
-        *');
-        $this->db->from('booking');
-        $this->db->join('vacation_homes', 'vacation_homes.id = booking.vacation_home_id', 'inner');
+
+        $this->db->select('*');
+        $this->db->from('vacation_homes');
+        $this->db->join('booking', 'vacation_homes.id = booking.vacation_home_id', 'left');
 
         //$this->db->where("arrival >=" $dateQuery "AND departure <=" $dateQuery2");
 
-        var_dump($nameQuery);
-
-        if ($nameQuery != null) {
-            $this->db->like('vacation_homes.name', $nameQuery);
-            var_dump($nameQuery);
-        }
+        // var_dump($nameQuery);
 
         if ($dateQuery != null && $dateQuery2 != null) {
-            //$this->db->where("arrival <=", $dateQuery);
-            //$this->db->where("departure >=", $dateQuery2);
+            $this->db->group_start()
+                ->where("booking.arrival < '".$dateQuery."'")
+                ->or_where("booking.arrival IS null")
+                ->or_where("booking.departure > '".$dateQuery2."'")
+                ->or_where("booking.departure IS null")
+            ->group_end();
+        }
 
-            $sql = "SELECT * FROM vacation_homes WHERE id NOT IN(SELECT vacation_homes.id FROM vacation_homes JOIN booking ON vacation_homes.id = booking.vacation_home_id WHERE (arrival <= ? AND departure >= ?) OR (arrival BETWEEN ? AND ?))";
-            $this->db->query($sql, array($dateQuery, $dateQuery2, $dateQuery, $dateQuery2));
-
-            //WHERE NOT (arrival > $dateQuery2 OR departure < $dateQuery)
+        if ($nameQuery != null) {
+            $this->db->where("vacation_homes.name LIKE '%".$nameQuery."%'");
         }
 
         if ($guestQuery != null) {
             $this->db->like('vacation_homes.sleeps', $guestQuery);
         }
 
-        $query = $this->db->get(); 
-        return $query->result();
+        //$result = $this->db->query($sql);
+        $result = $this->db->get();
+        var_dump($result->result_array());
     }
 }

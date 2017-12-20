@@ -16,10 +16,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="image">
 		<div class="search">
 			<form  method="post" action="index.php/search/results"  method="POST"> 
-				<input type="text2" name="query" placeholder="Search..">
-				<input type="date" name="query2" placeholder="From">
-				<input type="date" name="query3" placeholder="Until">
-				<input type="number" name="query4" placeholder="Guests">
+        		<input type="text" class ="home_inputs search_input" name="query" value="<?php echo html_escape($query = null); ?>" placeholder="Search..">
+                <input type="date" class ="home_inputs" name="query2" value="<?php echo html_escape($query2 = null); ?>"  placeholder="From">
+                <input type="date" class ="home_inputs" name="query3" value="<?php echo html_escape($query3 = null); ?>"  placeholder="Until">
+                <input type="number" class ="home_inputs" name="query4" value="<?php echo html_escape($query4 = null); ?>"  placeholder="Guests">
 				<input type="submit" name="go" value="Search">
 			</form>
 		</div>

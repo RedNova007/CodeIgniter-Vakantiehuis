@@ -55,61 +55,32 @@
 	left: 25%;
 }
 
-input[type="text2"], textarea {
+.home_inputs, textarea {
 	outline: none;
 	box-shadow:none !important;
 	border:1px solid orange !important;
 }
 
-input[type=text2] {
+.home_inputs {
     width: 200px;
+    height: 50px;
     box-sizing: border-box;
     border-radius: 4px;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
     background-color: white;
-    background-image: url('icons/search.jpg');
-    background-position: 5px 12px; 
+    padding: 16px 8px 16px 32px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+.home_inputs:nth-child(1){
+	padding: 16px 8px 16px 52px;
+}
+
+.search_input{
+	background-image: url('icons/search.jpg');
+    background-position: 10px 10px; 
     background-repeat: no-repeat;
-    padding: 16px 8px 16px 32px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-
-input[type="text3"], textarea {
-	outline: none;
-	box-shadow:none !important;
-	border:1px solid orange !important;
-}
-
-input[type=text3] {
-    width: 200px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-    background-color: white;
-    padding: 16px 8px 16px 32px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-
-input[type="date"], textarea {
-	outline: none;
-	box-shadow:none !important;
-	border:1px solid orange !important;
-}
-
-input[type=date] {
-    width: 220px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    font-size: 20px;
-    font-family: 'Roboto', sans-serif;
-    background-color: white;
-    padding: 16px 8px 16px 32px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
 }
 
 .offers{
