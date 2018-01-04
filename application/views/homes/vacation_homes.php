@@ -22,7 +22,7 @@
 			?>
 				<tr>
 					<td>
-					<a href="<?php echo base_url(); ?>Homes/houseOverview?id=<?php echo($vacation_home['id'])?>"> <?=$vacation_home['name']?> </a>
+					<a href="<?php echo base_url(); ?>Homes/houseOverview/<?php echo($vacation_home['id'])?>"> <?=$vacation_home['name']?> </a>
 					<?php 
 		
 

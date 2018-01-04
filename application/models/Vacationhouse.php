@@ -15,7 +15,7 @@ class Vacationhouse extends CI_Model{
     			$this->db->where($key,$value);
     		}
     	}
-
+ 
         if(array_key_exists("id",$params)){
             $this->db->where('id',$params['id']);
             $query = $this->db->get();

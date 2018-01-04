@@ -37,7 +37,7 @@
 									<p><b>Price Per Week: €</b><?php echo $vac['price_per_week']; ?></p>	
 									<p><b>Damage Deposit: €</b><?php echo $vac['damage_deposit']; ?></p>
 									<br><br><br><br>
-									</div>	
+									</div>	 
 
 							<?php } ?>		
 						

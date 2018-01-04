@@ -74,7 +74,7 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn'	=> 'mysql:host=localhost; dbname=vakantiehuisje; charset=utf8;',
+	'dsn'	=> 'mysql:host=localhost; dbname=Vakantiehuisje; charset=utf8;',
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',

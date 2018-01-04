@@ -19,11 +19,14 @@ class Homes extends CI_Controller {
     	$this->load->view('homes/vacation_homes', $data);
     }
 
-    public function houseOverview()
+    public function houseOverview($id)
     {
         $data = array();
-        $homeId = $_GET ['id'];
-        $data['vacationhouse'] = $this->Homes_model->get_vacationhome_info($homeId);
+
+        $data['vacationhouse'] = $this->Homes_model->get_vacationhome_info($id);
+        $data['vacationhouse_img'] = $this->Homes_model->get_vacationhome_images($id);
+
+
         $this->load->view('homes/home', $data);
     }
 }

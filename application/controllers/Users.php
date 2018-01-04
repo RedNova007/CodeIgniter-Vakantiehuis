@@ -21,7 +21,7 @@ class Users extends CI_Controller {
             $this->load->view('users/account', $data);
         }else{
             redirect('users/login');
-        }
+        } 
     }
     
     /*

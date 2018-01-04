@@ -18,6 +18,18 @@ class Homes_model extends CI_Model {
     	$where = $this->db->where('id', $homeId);
     	$query = $this->db->get('vacation_homes');	
     	
-    	return $query->row_array();
+    	return $query->row_array();  
     }
+
+
+    public function get_vacationhome_images($homeId)
+    {
+
+        
+        $where = $this->db->where('vacation_home_id', $homeId);
+        $query = $this->db->get('images');
+        $result_array = $query->result_array();
+        
+        return $result_array;
+    }  
 }

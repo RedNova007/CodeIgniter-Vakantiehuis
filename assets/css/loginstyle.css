@@ -416,27 +416,40 @@ height: auto;
 }
 .regi_button{
 	position: absolute;
-	padding: 11px;
+	padding: 13px;
+	color: white;
+	background-color: #FCB216;
+	display: inline-block;
+}
+.regi_button .info-hover, .pw_button .info-hover, .pwcf_button .info-hover {
+    visibility: hidden;
+    width: 200px;
+    background-color: #5E5F60;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    z-index: 1;
+    padding: 4px;
+	margin-top: -13px;
+	margin-left: 40px;
+}
+
+.regi_button:hover .info-hover, .pw_button:hover .info-hover, .pwcf_button:hover .info-hover {
+    visibility: visible;
 }
 .pw_button{
 	position: absolute;
-	padding: 11px;
+	padding: 13px;
 	margin-top: 10px;
+	color: white;
+	background-color: #FCB216;
+	display: inline-block;
 }
 .pwcf_button{
 	position: absolute;
-	padding: 11px;
-}
-
-.container{
-	height: 200px;
-	padding: 0;	
-	position: relative;
-}
-
-#myCarousel{
-	overflow: hidden;
-	height: 200px;
-	position: absolute;
-	right: calc(0px);
+	padding: 13px;
+	color: white;
+	background-color: #FCB216;
+	display: inline-block;
 }

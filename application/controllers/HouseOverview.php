@@ -77,7 +77,7 @@ class HouseOverview extends CI_Controller
     {
         $data = array();
         $data['vacationhouse'] = $this->vacationhouse->get_owner_vaction_home();
-        $this->load->view('houseOverview/vacationhouse', $data);   
+        $this->load->view('houseOverview/vacationhouse', $data);    
 
     }
 
