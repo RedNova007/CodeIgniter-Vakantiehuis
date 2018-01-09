@@ -19,6 +19,9 @@ class Booking extends CI_Controller {
                 $bookingData = array();
                 if($this->input->post('bookingSubmit')){
                 	$this->form_validation->set_rules('booking_name', 'Name', 'required');
+                    $this->form_validation->set_rules('booking_email', 'Email', 'required|valid_email');
+
+
 
                     $bookingData = array(
                         'vacation_home_id' => strip_tags($this->input->post('vacation_home_id')),
