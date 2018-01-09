@@ -20,6 +20,7 @@ class Booking extends CI_Controller {
                 if($this->input->post('bookingSubmit')){
                 	$this->form_validation->set_rules('booking_name', 'Name', 'required');
                     $this->form_validation->set_rules('booking_email', 'Email', 'required|valid_email');
+                    $this->form_validation->set_rules('booking_guests', 'Guests', 'is_natural_no_zero|numeric');
 
 
 
