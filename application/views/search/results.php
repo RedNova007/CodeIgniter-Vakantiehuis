@@ -10,11 +10,18 @@
         <tr>
             <th>Name</th>
         </tr>
-	   <?php foreach($searchResults as $searchResult){ ?>
+	   <?php 
+        if ($searchResults != null){
+            foreach($searchResults as $searchResult){ ?>
         <tr>
             <td><?php echo $searchResult->name?></td>
         </tr>
-        <?php } ?>
+        <?php 
+            }
+        }else{ 
+            echo "No results";
+        }
+        ?>
     </table>
 </body>
 </html>

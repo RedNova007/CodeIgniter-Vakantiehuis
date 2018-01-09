@@ -6,7 +6,7 @@ class Search_model extends CI_Model {
         $this->load->database();
     }
 
-    public function search($nameQuery = null, $dateQuery = null, $dateQuery2 = null)
+    public function search($nameQuery = null, $dateQuery = null, $dateQuery2 = null, $guestQuery = null)
     {
      //    $this->db->select('*');
      //    $this->db->from('vacation_homes');
@@ -32,32 +32,34 @@ class Search_model extends CI_Model {
 
         //SELECT * FROM booking WHERE arrival <= `2017-12-15 00:00:00` AND departure >= `2017-12-20 00:00:00`
 
-        $this->db->distinct();
-        $this->db->select('vacation_homes.
-        *');
-        $this->db->from('booking');
-        $this->db->join('vacation_homes', 'vacation_homes.id = booking.vacation_home_id', 'inner');
+
+        $this->db->select('*');
+        $this->db->from('vacation_homes');
+        $this->db->join('booking', 'vacation_homes.id = booking.vacation_home_id', 'left');
 
         //$this->db->where("arrival >=" $dateQuery "AND departure <=" $dateQuery2");
 
-        var_dump($nameQuery);
-
-        if ($nameQuery != null) {
-            $this->db->like('vacation_homes.name', $nameQuery);
-            var_dump($nameQuery);
-        }
+        // var_dump($nameQuery);
 
         if ($dateQuery != null && $dateQuery2 != null) {
-            //$this->db->where("arrival <=", $dateQuery);
-            //$this->db->where("departure >=", $dateQuery2);
-
-            $where = "NOT (arrival > '$dateQuery' OR departure < '$dateQuery2')";
-            $this->db->where($where);
-
-            //WHERE NOT (arrival > $dateQuery2 OR departure < $dateQuery)
+            $this->db->group_start()
+                ->where("booking.arrival < '".$dateQuery."'")
+                ->or_where("booking.arrival IS null")
+                ->or_where("booking.departure > '".$dateQuery2."'")
+                ->or_where("booking.departure IS null")
+            ->group_end();
         }
 
-        $query = $this->db->get(); //weergeef welke hoger is dan arrivalquery en welke lager is dan departurequery (tussenin)
-        return $query->result();
+        if ($nameQuery != null) {
+            $this->db->where("vacation_homes.name LIKE '%".$nameQuery."%'");
+        }
+
+        if ($guestQuery != null) {
+            $this->db->like('vacation_homes.sleeps', $guestQuery);
+        }
+
+        //$result = $this->db->query($sql);
+        $result = $this->db->get();
+        var_dump($result->result_array());
     }
 }
