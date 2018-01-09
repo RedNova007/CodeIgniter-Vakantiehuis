@@ -18,9 +18,15 @@ class Booking extends CI_Controller {
                 $data = array();
                 $bookingData = array();
                 if($this->input->post('bookingSubmit')){
+                    $this->form_validation->set_rules('vacation_home_id', 'ID', 'required|is_natural_no_zero|numeric');
                 	$this->form_validation->set_rules('booking_name', 'Name', 'required');
                     $this->form_validation->set_rules('booking_email', 'Email', 'required|valid_email');
-                    $this->form_validation->set_rules('booking_guests', 'Guests', 'is_natural_no_zero|numeric');
+                    $this->form_validation->set_rules('booking_guests', 'Guests', 'required|is_natural_no_zero|numeric');
+                    $this->form_validation->set_rules('arrival', 'Arrival', 'required');
+                    $this->form_validation->set_rules('departure', 'Departure', 'required');
+                    $this->form_validation->set_rules('booking_pickup', 'Pickup', 'required');
+                    $this->form_validation->set_rules('booking_requests', 'Requests', 'required');
+
 
 
 
