@@ -12,7 +12,7 @@
 			
 			<h2>the owner will contact you</h2>
 
-			<a href="<?php echo base_url(); ?>index.php/"><button class="btn-primary">Return to homepage</button></a>
+			<a href="<?php echo base_url(); ?> "><button class="btn-primary">Return to homepage</button></a>
 
 	</div>
 </body>
