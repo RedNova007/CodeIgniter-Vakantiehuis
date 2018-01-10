@@ -18,11 +18,7 @@ class Search extends CI_Controller {
         $dateQuery2 = $this->input->post('query3');
         $guestQuery = $this->input->post('query4');
 
-        $nameQuery = $this->security->xss_clean($nameQuery);
-        $dateQuery = $this->security->xss_clean($dateQuery);
-        $dateQuery2 = $this->security->xss_clean($dateQuery2);
         $guestQuery = (int)$guestQuery;
-
 
         var_dump($nameQuery);
         var_dump($dateQuery);
