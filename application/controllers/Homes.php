@@ -11,12 +11,12 @@ class Homes extends CI_Controller {
 
     public function index() 
     {
-    	//$data = array();
+    	$data = array();
 
-		//$data['vacation_homes'] = $this->Homes_model->get_vacation_homes();
+		$data['vacation_homes'] = $this->Homes_model->get_vacation_homes();
 
     	$this->load->view('_templates/header');
-    	$this->load->view('homes/vacation_homes');
+    	$this->load->view('homes/vacation_homes', $data);
     }
 
     public function houseOverview()
