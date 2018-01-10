@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">  
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="<?php echo base_url(); ?>assets/css/loginstyle.css" rel='stylesheet' type='text/css' />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -24,6 +23,7 @@
 						</div>        
 						<div class="container">
 							<div id="myCarousel" class="carousel slide" data-ride="carousel">
+								<iframe width="100%" height="100%" frameborder="0" src="application/slider.html"></iframe>
 							    <ol class="carousel-indicators">
 							      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 							      <li data-target="#myCarousel" data-slide-to="1"></li>
