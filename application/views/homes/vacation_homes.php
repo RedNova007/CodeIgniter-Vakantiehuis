@@ -28,7 +28,7 @@
 						    <th>Price per week</th>
 						  </tr>
 	    					<?php 
-								foreach($vacation_homes as $vacation_home) {
+								foreach($vacation_homes as $vacation_home) { 
 							?>
 								<tr>
 									<td>

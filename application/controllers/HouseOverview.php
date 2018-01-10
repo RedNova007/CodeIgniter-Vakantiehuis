@@ -57,12 +57,12 @@ class HouseOverview extends CI_Controller
             }
 
             else{
-                 $this->load->view('Errors/index.html');
+                 redirect('Users/login');
             }
         }
 
         else{
-            $this->load->view('Errors/index.html');
+            redirect('Users/login');
         }
         
     }
@@ -75,9 +75,21 @@ class HouseOverview extends CI_Controller
 
     public function house()
     {
-        $data = array();
-        $data['vacationhouse'] = $this->vacationhouse->get_owner_vaction_home();
-        $this->load->view('houseOverview/vacationhouse', $data);   
+         if($this->session->userdata('isUserLoggedIn')){
+
+            $role = $this->session->get_userdata('role');
+            
+            if($role['role'] == 'Owner'){
+                $data = array();
+                $data['vacationhouse'] = $this->vacationhouse->get_owner_vaction_home();
+                $this->load->view('houseOverview/vacationhouse', $data);   
+            }
+        }
+
+        else{
+            redirect('Users/login');
+        }
+        
 
     }
 
