@@ -1,4 +1,4 @@
-.header{
+.header1{
 	width: 100%;
 	background-color: white;
 	padding-top: 20px;
@@ -109,7 +109,7 @@ h5{
 	color: rgba(215, 40, 40, 0.9);
 }
 
-li{
+.navigation2{
 	display: inline;
 	margin-left: 10px;
 }
@@ -119,12 +119,12 @@ li{
 	padding: 0;
 }
 
-ul li a{
+.navigation2 a{
 	color: black;
 	text-decoration: none;
 }
 
-ul li a:hover{
+.navigation2 a:hover{
 	color: orange;
 }
 

@@ -18,7 +18,7 @@
 			<div class="w3agile-validation w3ls-validation">
 				<div class="panel panel-widget agile-validation register-form">
 					<div class="validation-grids widget-shadow" data-example-id="basic-forms">
-						<table>
+						<table class="all_homes">
 						  <tr>
 						    <th>Name</th>
 						    <th>Guests</th>		    
@@ -32,7 +32,7 @@
 							?>
 								<tr>
 									<td>
-									<a href="<?php echo base_url(); ?>Homes/houseOverview?id=<?php echo($vacation_home['id'])?>"> <?=$vacation_home['name']?> </a>
+									<a class="hoverhomes" href="<?php echo base_url(); ?>Homes/houseOverview?id=<?php echo($vacation_home['id'])?>"> <?=$vacation_home['name']?> </a>
 									</td>
 									<td>
 										<?=$vacation_home['sleeps']?>

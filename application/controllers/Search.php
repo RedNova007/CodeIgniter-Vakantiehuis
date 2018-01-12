@@ -20,11 +20,6 @@ class Search extends CI_Controller {
 
         $guestQuery = (int)$guestQuery;
 
-        var_dump($nameQuery);
-        var_dump($dateQuery);
-        var_dump($dateQuery2);
-        var_dump($guestQuery);
-
         $data['searchResults'] = $this->search_model->search($nameQuery, $dateQuery, $dateQuery2, $guestQuery);
 
         $this->load->view('_templates/header');
