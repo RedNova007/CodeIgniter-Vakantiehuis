@@ -235,7 +235,7 @@ class CI_Upload {
 	 *
 	 * @var	bool
 	 */
-	public $xss_clean = FALSE;
+	public $xss_clean = TRUE;
 
 	/**
 	 * Apache mod_mime fix flag

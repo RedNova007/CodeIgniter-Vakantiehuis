@@ -20,4 +20,20 @@ class Homes_model extends CI_Model {
     	
     	return $query->row_array();
     }
+    public function get_vacationhome_images($homeId)
+    {
+        $imageId = array();
+        $imageId = $this->db->get('images');
+        $where = $this->db->where('vacation_home_id', $homeId);
+        $query = $this->db->get('images');
+        $result = $query->result_array(); 
+
+        return $result; 
+       
+
+
+
+
+
+    }
 }
