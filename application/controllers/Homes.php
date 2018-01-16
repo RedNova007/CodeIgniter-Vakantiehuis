@@ -24,6 +24,7 @@ class Homes extends CI_Controller {
         $data = array();
         $homeId = $_GET ['id'];
         $data['vacationhouse'] = $this->Homes_model->get_vacationhome_info($homeId);
+        $data['images'] = $this->Homes_model->get_vacationhome_images($homeId);
 <<<<<<< HEAD
         $this->load->view('_templates/header');
 =======
