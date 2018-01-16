@@ -2,6 +2,7 @@
 <html>
 <head>
 	<link href="<?php echo base_url(); ?>assets/css/loginstyle.css" rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
 	<title>Booking Succes</title>
 </head>
 <body>
