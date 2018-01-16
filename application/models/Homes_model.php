@@ -26,7 +26,7 @@ class Homes_model extends CI_Model {
         $imageId = $this->db->get('images');
         $where = $this->db->where('vacation_home_id', $homeId);
         $query = $this->db->get('images');
-        $result = $query->result_array(); 
+        $result = $query->row_array(); 
 
         return $result; 
        
