@@ -2,6 +2,7 @@
 <html lang="en">  
 <head>
 <link href="<?php echo base_url(); ?>assets/css/loginstyle.css" rel='stylesheet' type='text/css' />
+<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
 </head>
 <body>
 <div class="container">

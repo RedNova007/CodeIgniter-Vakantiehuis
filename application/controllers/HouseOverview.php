@@ -52,6 +52,7 @@ class HouseOverview extends CI_Controller
                 }
                 $data['Vacationhouse'] = $vacation_homesData;
                 //load the view
+                $this->load->view('_templates/header');
                 $this->load->view('houseOverview/register_vacationhouse', $data);    
 
             }
@@ -69,7 +70,7 @@ class HouseOverview extends CI_Controller
 
     public function edit()
     {
-
+        $this->load->view('_templates/header');
     	$this->load->view('HouseOverview/edit_vacationhouse');    
     }
 

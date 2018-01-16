@@ -53,6 +53,7 @@ class Booking extends CI_Controller {
                 }
                 $data['Booking'] = $bookingData;
                 //load the view
+                $this->load->view('_templates/header');
                 $this->load->view('booking/Booking_Form', $data);
     }
 

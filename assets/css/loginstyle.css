@@ -27,7 +27,7 @@ ul, ol {margin: 0;}
 p {margin: 0;}
 
 html, body{
-	font-family: 'Signika', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight:300;
     font-size: 100%;
     overflow-x: hidden;
@@ -73,7 +73,7 @@ ul,label{
     background-color: rgba(20, 21, 22, 0.52);
 }
 .input-info h3,.map-info h3{
-	font-family: 'Signika', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	font-weight:700;
     color: #000000;
     font-size: 1.7em;
@@ -115,7 +115,7 @@ ul,label{
     background: #FCB216 !important;
     color: #FFF;
     border: none;
-	font-family: 'Signika', sans-serif;
+	font-family: 'Roboto', sans-serif;
     font-size: 1.3em;
     text-transform: uppercase;
     font-weight: 700;
