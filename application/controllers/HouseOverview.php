@@ -58,12 +58,14 @@ class HouseOverview extends CI_Controller
             }
 
             else{
-                 redirect('Users/login');
+                 $this->load->view('_templates/header');
+                 $this->load->view('errors/index.html');
             }
         }
 
         else{
-            redirect('Users/login');
+            $this->load->view('_templates/header');
+            $this->load->view('errors/index.html');
         }
         
     }
@@ -86,10 +88,14 @@ class HouseOverview extends CI_Controller
                 $this->load->view('_templates/header');
                 $this->load->view('houseOverview/vacationhouse', $data);   
             }
+            else{
+                $this->load->view('_templates/header');
+                $this->load->view('errors/index.html');
+            }
         }
-
         else{
-            redirect('Users/login');
+            $this->load->view('_templates/header');
+            $this->load->view('errors/index.html');
         }
         
 
