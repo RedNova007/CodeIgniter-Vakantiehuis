@@ -25,7 +25,9 @@
 								<div class="form-group valid-form">
 									<p class="regi_form"> Name * </p>
 									<input type="text" class="form-control" name="name" maxlength="30" placeholder="Name Vacationhouse" required="" value="<?php echo !empty($vacationhouse['name'])?$vacationhouse['name']:''; ?>">
-									<button class="regi_button" title="Insert the name for your vacationhouse, for example 'Villa la dans'.">!</button>
+									<div class="regi_button">!
+										<span class="info-hover">Insert the name for your vacationhouse, for example 'Villa la dans.</span>
+									</div>
 									<?php echo form_error('name','<span class="help-block">','</span>'); ?>
 								</div>
 								<div class="form-group has-feedback">
@@ -37,14 +39,18 @@
 								<div class="form-group has-feedback">
 									<p class="regi_form"> Price per night * </p>
 									<input type="text" onkeydown="return event.which >= 8 && event.which <= 57" class="form-control" name="price_per_night" placeholder="Price per night &euro;" data-error="Price per night is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
-									<button class="regi_button" title="Insert the price per night.">!</button>
+									<div class="regi_button">!
+										<span class="info-hover">Insert the price per night.</span>
+									</div>
 									<?php echo form_error('price_per_night','<span class="help-block">','</span>'); ?>
 								</div>		
 							<br />
 								<div class="form-group has-feedback">
 									<p class="regi_form"> Price per week * </p>
 									<input type="text" onkeydown="return event.which >= 8 && event.which <= 57" class="form-control" name="price_per_week" placeholder="Price per week &euro;" data-error="Price per week is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
-									<button class="regi_button" title="Insert the price per week.">!</button>
+									<div class="regi_button">!
+										<span class="info-hover">Insert the price per week.</span>
+									</div>
 									<?php echo form_error('price_per_night','<span class="help-block">','</span>'); ?>
 								</div>		
 							<br />							

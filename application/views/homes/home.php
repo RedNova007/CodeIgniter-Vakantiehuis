@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">  
 <head>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="<?php echo base_url(); ?>assets/css/loginstyle.css" rel='stylesheet' type='text/css' />
+<<<<<<< HEAD
   <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+=======
+
+>>>>>>> c278d9aea25789e564120b43708e85eb03e3948d
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 <div class="container">
@@ -23,6 +28,7 @@
 					<div class="validation-grids widget-shadow" data-example-id="basic-forms">
 						<div class="input-info">
 							<h3><?php echo $vacationhouse['name']; ?></h3>
+							<?php var_dump($images['image_name']);  ?>
 						</div>        
 						<div class="container">
 							<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -33,14 +39,17 @@
 							    </ol>
 						    	<div class="carousel-inner">
 						      		<div class="item active">
-						        		<?php echo '<img src="data:image/jpeg;base64,'.base64_encode($vacationhouse['thumbnail']) .'"  style="width:100%; />';?>
+						        		<?php echo '<img src="data:image/jpeg;base64,'.base64_encode($images['id']) .'" />';?>
+						        		
 						      		</div>
 							      	<div class="item">
-							        	<img src="assets/css/testafbeeldingen/forest.jpg" style="width:100%;">
+							      		
+							      		<img src="./upload1/test.jpg" style="width:100%;">
+							        	
 							      	</div>
 							    
 							      	<div class="item">
-							        	<img src="testafbeeldingen/forest3.jpg" style="width:100%;">
+							        	<img src="./upload1/test.jpg" style="width:100%;">
 							      	</div>
 						    	</div>
 							    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
