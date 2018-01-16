@@ -3,11 +3,9 @@
 <head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="<?php echo base_url(); ?>assets/css/loginstyle.css" rel='stylesheet' type='text/css' />
-<<<<<<< HEAD
   <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
-=======
 
->>>>>>> c278d9aea25789e564120b43708e85eb03e3948d
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
