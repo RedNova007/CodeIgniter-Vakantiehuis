@@ -26,9 +26,8 @@
 					<div class="validation-grids widget-shadow" data-example-id="basic-forms">
 						<div class="input-info">
 							<h3><?php echo $vacationhouse['name']; ?></h3>
-							<?php var_dump($images['image_name']);  ?>
 						</div>        
-						<div class="container">
+						<!-- <div class="container">
 							<div id="myCarousel" class="carousel slide" data-ride="carousel">
 							    <ol class="carousel-indicators">
 							      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -59,7 +58,7 @@
 							      <span class="sr-only">Next</span>
 							    </a>
 						    </div>
-						</div>
+						</div> -->
 						
 						<div class="account-info">						 									
 							<p><b>Description: </b><?php echo $vacationhouse['description']; ?></p>
