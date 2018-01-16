@@ -25,7 +25,6 @@ class Booking extends CI_Controller {
                     $this->form_validation->set_rules('arrival', 'Arrival', 'required');
                     $this->form_validation->set_rules('departure', 'Departure', 'required');
                     $this->form_validation->set_rules('booking_pickup', 'Pickup', 'required');
-                    $this->form_validation->set_rules('booking_requests', 'Requests', 'required');
 
 
 
