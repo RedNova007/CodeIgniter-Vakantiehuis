@@ -440,3 +440,65 @@ height: auto;
 	position: absolute;
 	right: calc(0px);
 }
+
+.header1{
+	width: 100%;
+	background-color: white;
+	padding-top: 20px;
+	padding-bottom: 25px;
+	z-index: 100;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	box-shadow: 5px;
+}
+
+.navigation{
+	margin: 0 auto;
+	width: 200px;
+}
+
+.logo{
+	float: left;
+	width: 25%;
+}
+
+.navigation2 a{
+	color: black;
+	text-decoration: none;
+}
+
+.navigation2 a:hover{
+	color: orange;
+}
+
+.navigation2{
+	display: inline;
+	margin-left: 10px;
+}
+
+.all_homes td, th {    
+    text-align: left;
+    color: white;
+    padding-left: 5px;
+    padding-bottom: 1px;
+    padding-top: 1px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.all_homes th{
+	background-color: orange;
+	color: black;
+}
+
+.all_homes {
+	border-collapse: collapse;
+    width: 100%;
+}
+
+.hoverhomes{
+	color: white;
+}
+
+.hoverhomes:hover{
+	color: orange;
+}
