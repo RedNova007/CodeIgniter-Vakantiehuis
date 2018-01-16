@@ -23,6 +23,7 @@
 					<div class="validation-grids widget-shadow" data-example-id="basic-forms">
 						<div class="input-info">
 							<h3><?php echo $vacationhouse['name']; ?></h3>
+							<?php var_dump($images['image_name']);  ?>
 						</div>        
 						<div class="container">
 							<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -33,10 +34,13 @@
 							    </ol>
 						    	<div class="carousel-inner">
 						      		<div class="item active">
-						        		<?php echo '<img src="data:image/jpeg;base64,'.base64_encode($images['image']) .'" />';?>	
-						        	</div>
-							      	<div class="item">							      		
-							      		<img src="./upload1/test.jpg" style="width:100%;">							        	
+						        		<?php echo '<img src="data:image/jpeg;base64,'.base64_encode($images['id']) .'" />';?>
+						        		
+						      		</div>
+							      	<div class="item">
+							      		
+							      		<img src="./upload1/test.jpg" style="width:100%;">
+							        	
 							      	</div>
 							    
 							      	<div class="item">
