@@ -15,8 +15,11 @@ class Booking extends CI_Controller {
 
     public function index() 
     { 
-                $data = array();
-                $bookingData = array();
+        $data = array();
+        $bookingData = array();
+
+            if($this->session->userdata('isUserLoggedIn')){
+
                 if($this->input->post('bookingSubmit')){
                     $this->form_validation->set_rules('vacation_home_id', 'ID', 'required|is_natural_no_zero|numeric');
                 	$this->form_validation->set_rules('booking_name', 'Name', 'required');
@@ -55,6 +58,9 @@ class Booking extends CI_Controller {
                 //load the view
                 $this->load->view('_templates/header');
                 $this->load->view('booking/Booking_Form', $data);
+            }else{
+            redirect('users/login');
+        }
     }
 
 

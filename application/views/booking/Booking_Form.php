@@ -28,12 +28,12 @@
                   <input type="hidden" class="form-control" name="vacation_home_id" maxlength="30" placeholder="" required="" value="<?php echo "$id"; ?>" 
                   <?php echo form_error('vacation_home_id','<span class="help-block">','</span>'); ?>
                 </div>
-                Name *
+                <p class="regi_form">Name *</p>
                 <div class="form-group valid-form">
                   <input type="text" class="form-control" name="booking_name" maxlength="30" placeholder="First Name/Last Name" required="" value="<?php echo !empty($Booking['booking_name'])?$Booking['booking_name']:''; ?>">
                   <?php echo form_error('booking_name','<span class="help-block">','</span>'); ?>
                 </div>
-                E-mail *
+                <p class="regi_form">E-mail *</p>
                 <div class="form-group has-feedback">
                   <input type="email" cols="250" class="form-control" name="booking_email" maxlength="200" placeholder="Myname@exemple.com" data-error="E-mail is invalid" required="" value="<?php echo !empty($Booking['booking_email'])?$Booking['booking_email']:''; ?>">
                   <?php echo form_error('E-mail','<span class="help-block">','</span>'); ?>
@@ -41,7 +41,7 @@
               <br />
               
                 <div class="selectbox">
-                  Number of Guests: *<br />
+                  <p class="regi_form">Number of Guests: *</p>
                   <select name="booking_guests" value="booking_guests" required="">
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -60,22 +60,23 @@
                     <option value="14">14</option>
                     <option value="15">15</option>
                   </select> 
-                </div>    
+                </div> 
+              <br />   
               <br />  
-                Arrival Date *
+                <p class="regi_form">Arrival Date *</p>
                 <div class="form-group valid-form">
                   <input type="date" class="form-control" name="arrival" maxlength="30" required="" value="<?php echo !empty($Booking['arrival'])?$Booking['arrival']:''; ?>">
                   <?php echo form_error('arrival','<span class="help-block">','</span>'); ?>
                 </div>   
               <br />
-                Departure Date *
+                <p class="regi_form">Departure Date *</p>
                 <div class="form-group valid-form">
                   <input type="date" class="form-control" name="departure" maxlength="30" required="" value="<?php echo !empty($Booking['departure'])?$Booking['departure']:''; ?>">
                   <?php echo form_error('departure','<span class="help-block">','</span>'); ?>
                 </div>   
               <br />
                 <div class="form-group">
-                  Free Pickup? * 
+                  <p class="regi_form">Free Pickup? *</p>
                     <?php
                     if(!empty($Booking['booking_pickup']) && $Booking['booking_pickup'] == 'Yes'){
                       $fcheck = 'checked="checked"';
@@ -100,7 +101,7 @@
                 </div>
               <br />
               <br />
-                  Special Requests *
+                  <p class="regi_form">Special Requests *</p>
                 <div class="form-group valid-form">
                   <input type="text" class="form-control" name="booking_requests" maxlength="500" placeholder="Any spacial requests?" required="" value="<?php echo !empty($Booking['booking_requests'])?$Booking['booking_requests']:''; ?>">
                   <?php echo form_error('booking_requests','<span class="help-block">','</span>'); ?>
