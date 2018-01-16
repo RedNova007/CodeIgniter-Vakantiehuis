@@ -19,7 +19,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         		<input type="text" class ="home_inputs search_input" name="query" value="<?php echo html_escape($query = null); ?>" placeholder="Search..">
                 <input type="date" class ="home_inputs" name="query2" value="<?php echo html_escape($query2 = null); ?>"  placeholder="From">
                 <input type="date" class ="home_inputs" name="query3" value="<?php echo html_escape($query3 = null); ?>"  placeholder="Until">
-                <input type="number" class ="home_inputs" name="query4" value="<?php echo html_escape($query4 = null); ?>"  placeholder="Guests">
+                <!-- <input type="number" class ="home_inputs" name="query4" value="<?php echo html_escape($query4 = null); ?>"  placeholder="Guests"> -->
+                <input type="text" onkeydown="return event.which >= 8 && event.which <= 57" class="home_inputs" name="query4" placeholder="Guests" data-error="Price per night is invalid" required="" value="<?php echo html_escape($query4 = null); ?>">
 				<input type="submit" name="go" value="Search">
 			</form>
 		</div>
