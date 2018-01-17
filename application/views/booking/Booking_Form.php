@@ -1,107 +1,135 @@
+<?php $id = $_GET ['id']; ?> 
+
 <!DOCTYPE html>
-<html>
-<html lang="en"> 
-  <head>
-    <title>BookingForm</title>
-    <link href="<?php echo base_url(); ?>assets/css/BookingStyle.css" rel='stylesheet' type='text/css' />
-  </head>
-  <body>
-    <form action="">
-      <!--  Booking  -->
-      <div class="form-group">
-        <h2 class="heading">Booking</h2>
-        <div class="controls">
-          <input type="text" id="name" class="floatLabel" name="name">
-          <label for="name">Name</label>
+<html lang="en">  
+<head>
+<link href="<?php echo base_url(); ?>assets/css/loginstyle.css" rel='stylesheet' type='text/css' />
+<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <!-- validation -->
+  <div class="grids">
+    <div class="progressbar-heading grids-heading">
+      
+      <h2>Booking:</h2>
+    </div>
+    <div class="forms-grids">
+      <div class="forms3">
+      <div class="w3agile-validation w3ls-validation">
+        <div class="panel panel-widget agile-validation register-form">
+          <div class="validation-grids widget-shadow" data-example-id="basic-forms"> 
+            <div class="input-info">
+              <h3></h3>
+            </div>
+            <div class="form-body form-body-info">
+              <form action="" method="post">  
+                <div class="form-group valid-form">
+                  <input type="hidden" class="form-control" name="vacation_home_id" maxlength="30" placeholder="" required="" value="<?php echo "$id"; ?>">                   
+                  <?php echo form_error('vacation_home_id','<span class="help-block">','</span>'); ?>
+                </div>
+                <p class="regi_form">Name</p>
+                <div class="form-group valid-form">
+                  <input type="text" class="form-control" name="booking_name" maxlength="30" placeholder="First Name/Last Name" required="" value="<?php echo !empty($Booking['booking_name'])?$Booking['booking_name']:''; ?>">
+                    <div class="regi_button">!
+                      <span class="info-hover">Insert your name, for example 'Jan de vries'</span>
+                    </div>
+                  <?php echo form_error('booking_name','<span class="help-block">','</span>'); ?>
+                </div>
+                <p class="regi_form">E-mail</p>
+                <div class="form-group has-feedback">
+                  <input type="email" cols="250" class="form-control" name="booking_email" maxlength="200" placeholder="Myname@exemple.com" data-error="E-mail is invalid" required="" value="<?php echo !empty($Booking['booking_email'])?$Booking['booking_email']:''; ?>">
+                    <div class="regi_button">!
+                      <span class="info-hover">Insert your email, for example 'Jandevries@gmail.com'</span>
+                    </div>
+                  <?php echo form_error('E-mail','<span class="help-block">','</span>'); ?>
+                </div>    
+              <br />
+              
+                <div class="selectbox">
+                  <p class="regi_form">Number of Guests:</p>
+                  <select name="booking_guests" value="booking_guests" required="">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                  </select> 
+                </div> 
+              <br />   
+              <br />  
+                <p class="regi_form">Arrival Date</p>
+                <div class="form-group valid-form">
+                  <input type="date" class="form-control" name="arrival" maxlength="30" required="" value="<?php echo !empty($Booking['arrival'])?$Booking['arrival']:''; ?>">
+                    <div class="regi_button">!
+                      <span class="info-hover">When you want to arrive'</span>
+                    </div>                  
+                  <?php echo form_error('arrival','<span class="help-block">','</span>'); ?>
+                </div>   
+              <br />
+                <p class="regi_form">Departure Date</p>
+                <div class="form-group valid-form">
+                  <input type="date" class="form-control" name="departure" maxlength="30" required="" value="<?php echo !empty($Booking['departure'])?$Booking['departure']:''; ?>">
+                    <div class="regi_button">!
+                      <span class="info-hover">When you want to Departure'</span>
+                    </div>  
+                  <?php echo form_error('departure','<span class="help-block">','</span>'); ?>
+                </div>   
+              <br />
+                <div class="form-group">
+                  <p class="regi_form">Free Pickup?</p>
+                    <?php
+                    if(!empty($Booking['booking_pickup']) && $Booking['booking_pickup'] == 'Yes'){
+                      $fcheck = 'checked="checked"';
+                      $mcheck = '';
+                    }else{
+                      $mcheck = 'checked="checked"';
+                      $fcheck = '';
+                    }
+                    ?>
+                    <div class="radio">
+                      <label>
+                      <input type="radio" name="booking_pickup" value="Yes" <?php echo $mcheck; ?>>
+                      Yes
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="booking_pickup" value="No" <?php echo $fcheck; ?>>
+                        No
+                      </label>
+                    </div>
+                </div>
+              <br />
+              <br />
+                  <p class="regi_form">Special Requests</p>
+                <div class="form-group valid-form">
+                  <input type="text" class="form-control" name="booking_requests" maxlength="500" placeholder="Any spacial requests?" required="" value="<?php echo !empty($Booking['booking_requests'])?$Booking['booking_requests']:''; ?>"> 
+                  <?php echo form_error('booking_requests','<span class="help-block">','</span>'); ?>
+                </div>
+                <div class="form-group">
+                  <input type="submit" name="bookingSubmit" class="btn-primary" value="Submit"/>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-        <div class="controls">
-          <input type="text" id="email" class="floatLabel" name="email">
-          <label for="email">Email</label>
-        </div>       
-        <div class="controls">
-          <input type="tel" id="phone" class="floatLabel" name="phone">
-          <label for="phone">Phone</label>
-        </div>
-          <div class="grid">
-            <div class="col-2-3">
-              <div class="controls">
-               <input type="text" id="street" class="floatLabel" name="street">
-               <label for="street">Street</label>
-              </div>          
-            </div>
-            <div class="col-1-3">
-              <div class="controls">
-                <input type="number" id="street-number" class="floatLabel" name="street-number">
-                <label for="street-number">Number</label>
-              </div>          
-            </div>
-          </div>
-          <div class="grid">
-            <div class="col-2-3">
-              <div class="controls">
-                <input type="text" id="city" class="floatLabel" name="city">
-                <label for="city">City</label>
-              </div>         
-            </div>
-            <div class="col-1-3">
-              <div class="controls">
-                <input type="text" id="zip-code" class="floatLabel" name="zip-code">
-                <label for="post-code">Zip Code</label>
-              </div>         
-            </div>
-          </div>
-          <div class="controls">
-            <input type="text" id="country" class="floatLabel" name="country">
-            <label for="country">Country</label>
-          </div>
       </div>
-      <!--  Details -->
-      <div class="form-group">
-        <h2 class="heading">Details</h2>
-        <div class="grid">
-        <div class="col-1-4 col-1-4-sm">
-          <div class="controls">
-            <input type="date" id="arrive" class="floatLabel" name="arrive" value="<?php echo date('Y-m-d'); ?>">
-            <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Arrive</label>
-          </div>      
-        </div>
-        <div class="col-1-4 col-1-4-sm">
-          <div class="controls">
-            <input type="date" id="depart" class="floatLabel" name="depart" value="<?php echo date('Y-m-d'); ?>" />
-            <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Depart</label>
-          </div>      
-        </div>
-          </div>
-          <div class="grid">
-        <div class="col-1-3 col-1-3-sm">
-          <div class="controls">
-            <i class="fa fa-sort"></i>
-            <select class="floatLabel">
-              <option value="blank"></option>
-              <option value="1">1</option>
-              <option value="2" selected>2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-            </select>
-            <label for="fruit"><i class="fa fa-male"></i>&nbsp;&nbsp;People</label>
-          </div>      
-        </div>
-        <div class="">
-            <p class="info-text">Please describe your needs e.g. Extra beds, children's cots</p>
-            <br>
-            <div class="controls">
-              <textarea name="comments" class="floatLabel" id="comments"></textarea>
-              <label for="comments">Comments</label>
-              </div>
-                <button type="submit" value="Submit" class="col-1-4">Submit</button>
-          </div>  
-      </div> 
-    </form>
-  </body>
+      <div class="clear"> </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
 </html>

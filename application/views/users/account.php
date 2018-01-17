@@ -2,6 +2,7 @@
 <html lang="en">  
 <head>
 <link href="<?php echo base_url(); ?>assets/css/loginstyle.css" rel='stylesheet' type='text/css' />
+<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
 </head>
 <body>
 <div class="container">
@@ -16,7 +17,6 @@
 			<div class="w3agile-validation w3ls-validation">
 				<div class="panel panel-widget agile-validation register-form">
 					<div class="validation-grids widget-shadow" data-example-id="basic-forms">
-												<a href="<?php echo base_url(); ?>users/logout" class="logoutBtn">Logout</a>
 						<div class="input-info">
 							<h3>Welcome <?php echo $user['name']; ?>!</h3>
 						</div>

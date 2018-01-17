@@ -15,10 +15,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="container">
 	<div class="image">
 		<div class="search">
-			<input type="text2" name="search" placeholder="Search..">
-			<input type="text3" name="from" placeholder="From">
-			<input type="text3" name="until" placeholder="Until">
-			<input type="text3" name="guests" placeholder="Guests">
+			<form  method="post" action="search/results"  method="POST"> 
+        		<input type="text" class ="home_inputs search_input" name="query" value="<?php echo html_escape($query = null); ?>" placeholder="Search..">
+                <input type="date" class ="home_inputs" name="query2" value="<?php echo html_escape($query2 = null); ?>"  placeholder="From">
+                <input type="date" class ="home_inputs" name="query3" value="<?php echo html_escape($query3 = null); ?>"  placeholder="Until">
+                <!-- <input type="number" class ="home_inputs" name="query4" value="<?php echo html_escape($query4 = null); ?>"  placeholder="Guests"> -->
+                <input type="text" onkeydown="return event.which >= 8 && event.which <= 57" class="home_inputs" name="query4" placeholder="Guests" data-error="Price per night is invalid" required="" value="<?php echo html_escape($query4 = null); ?>">
+				<input type="submit" name="go" value="Search">
+			</form>
 		</div>
 		<?php echo '<img class="homepage_picture" src="data:image/jpeg;base64,'.base64_encode($homepage_picture['picture']) .'" />';?>
 	</div><br>
@@ -26,10 +30,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<?php
 		foreach ($vacation_homes as $vacation_home)
 		{
-	?>		
-		<div id="homepage_offers">
-			<div class="offers">
-				
+	?>
+		<div class="offers">
 				<img src="data:image/jpeg;base64,<?php echo base64_encode($vacation_home['thumbnail']); ?>"/>
 				<p class="offer_info">
 					<?= $vacation_home['name']; ?><br>
@@ -42,9 +44,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<div class="offer_bathrooms">
 						<p><?=	$vacation_home['bathrooms']?></p>
 					</div>
+					<div class="offer_price">
+						<p>€<?= $vacation_home['price_per_night']?>/night</p>
+					</div>
 				</p>
 			</div>
-		</div><br>
+		<br>
 	<?php
 		}	
 	?>

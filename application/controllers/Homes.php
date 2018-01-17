@@ -11,7 +11,7 @@ class Homes extends CI_Controller {
 
     public function index() 
     {
-    	$data = array();
+        $data = array();
 
 		$data['vacation_homes'] = $this->Homes_model->get_vacation_homes();
 
