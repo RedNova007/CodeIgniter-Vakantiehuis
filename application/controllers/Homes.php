@@ -9,9 +9,9 @@ class Homes extends CI_Controller {
         $this->load->model('Homes_model');
     }
 
-    public function index()  
+    public function index() 
     {
-    	$data = array();
+        $data = array();
 
 		$data['vacation_homes'] = $this->Homes_model->get_vacation_homes();
 
@@ -24,11 +24,6 @@ class Homes extends CI_Controller {
         $data = array();
         $homeId = $_GET ['id'];
         $data['vacationhouse'] = $this->Homes_model->get_vacationhome_info($homeId);
-        $data['images'] = $this->Homes_model->get_vacationhome_images($homeId);
-
-        $data['images'] = $this->Homes_model->get_vacationhome_images($homeId);
-        // var_dump($data['images']); 
-        $this->load->view('_templates/header');
         $this->load->view('homes/home', $data);
     }
 }
