@@ -17,20 +17,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div class="search">
 			<form  method="post" action="search/results"  method="POST"> 
         		<input type="text" class ="home_inputs search_input" name="query" value="<?php echo html_escape($query = null); ?>" placeholder="Search..">
-                <input type="date" class ="home_inputs" name="query2" value="<?php echo html_escape($query2 = null); ?>"  placeholder="From">
-                <input type="date" class ="home_inputs" name="query3" value="<?php echo html_escape($query3 = null); ?>"  placeholder="Until">
+                <input type="date" min="<?php echo date("Y-m-d"); ?>" class ="home_inputs" name="query2" value="<?php echo html_escape($query2 = null); ?>"  placeholder="From">
+                <input type="date" min="<?php echo date("Y-m-d"); ?>" class ="home_inputs" name="query3" value="<?php echo html_escape($query3 = null); ?>"  placeholder="Until">
                 <input type="number" class ="home_inputs" name="query4" value="<?php echo html_escape($query4 = null); ?>"  placeholder="Guests">
 				<input type="submit" name="go" value="Search">
 			</form>
 		</div>
 		<?php echo '<img class="homepage_picture" src="data:image/jpeg;base64,'.base64_encode($homepage_picture['picture']) .'" />';?>
 	</div><br>
+
+	<a href="homes" class="nounderline"><button>See all vacation homes</button></a>
 	
 	<?php
 		foreach ($vacation_homes as $vacation_home)
 		{
 	?>
 		<div class="offers">
+			<a class="homeoverview" href="Homes/houseOverview?id=<?php echo $vacation_home['id']?>">
 				<img src="data:image/jpeg;base64,<?php echo base64_encode($vacation_home['thumbnail']); ?>"/>
 				<p class="offer_info">
 					<?= $vacation_home['name']; ?><br>
@@ -47,17 +50,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 						<p>€<?= $vacation_home['price_per_night']?>/night</p>
 					</div>
 				</p>
-			</div>
-		<br>
-	<?php
-		}	
-	?>
-
-	<div class="all_homes">
-		<p>
-	   		<a href="homes"><p>See all vacation homes</p></a>
-		</p>
-	</div>
+			</a>
+		</div>
+	<br>
+<?php
+	}	
+?>
 
 </div>
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>

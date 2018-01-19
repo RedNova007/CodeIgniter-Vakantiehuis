@@ -89,7 +89,7 @@
     position: relative;
     width: 300px;
     height: 242px;
-    margin: 15px;
+    margin-top: 15px;
     border: 1px solid rgba(0, 0, 0, .2);
     margin-left: 50px;
 }
@@ -190,12 +190,39 @@ th, td {
 	text-decoration: none;
 }
 
-.all_homes a:hover{
-	color: white;
-}
-
 .offer_info{
 	font-family: 'Roboto', sans-serif;
 	color: black;
 	padding-left: 5px;
+}
+
+.homeoverview{
+	text-decoration: none!important;
+	color: black;
+}
+
+.nounderline{
+	text-decoration: none;
+}
+
+button {
+    background: #FCB216 !important;
+    color: #FFF;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: 700;
+    width: 100%;
+    margin-top: 1.5em;
+    outline: none;
+    display: block;
+    -webkit-transition: 0.5s all;
+    cursor: pointer;
+    text-decoration: none!important;
+}
+
+button:hover{
+	text-decoration: none!important;
+	color: black;
 }

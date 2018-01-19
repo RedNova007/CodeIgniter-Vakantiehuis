@@ -32,7 +32,7 @@
 								</div>
 								<div class="form-group has-feedback">
 									<p class="regi_form"> Description</p>
-									<input type="text" cols="250" class="form-control" name="description" maxlength="200" placeholder="Description" data-error="Description is invalid" required="" value="<?php echo !empty($vacationhouse['description'])?$vacationhouse['description']:''; ?>">
+									<input type="text" cols="250" class="form-control" name="description" maxlength="200" placeholder="Description" data-error="Description is invalid" value="<?php echo !empty($vacationhouse['description'])?$vacationhouse['description']:''; ?>">
 									<?php echo form_error('description','<span class="help-block">','</span>'); ?>
 								</div>		
 							<br />			
@@ -82,7 +82,7 @@
 								<div class="selectbox">
 									<p class="regi_form">Damage deposit:</p>
 										<select name="damage_deposit" value="damage_deposit" required="">
-										<option value="0">&euro;0</option>
+										<option value="">Select the damage deposit amount</option>
 										<option value="10">&euro;10</option>
 										<option value="25">&euro;25</option>
 										<option value="50">&euro;50</option>
@@ -112,7 +112,7 @@
 								<div class="selectbox">
 									<p class="regi_form">Minimum stay:</p>
 									<select name="minimum_stay" value="minimum_stay" required="">
-										<option value="0">0 Day</option>
+										<option value="">Select minimum days someone can book</option>
 										<option value="1">1 Day</option>
 										<option value="2">2 Days</option>
 										<option value="3">3 Days</option>
@@ -139,6 +139,7 @@
 								<div class="selectbox">
 									<p class="regi_form">Country:</p>
 									<select name="country_id" value="country_id"  required="">
+										<option value="">Select a country..</option>
 										<option value="4">Afghanistan</option>
 										<option value="248">Åland Islands</option>
 										<option value="8">Albania</option>
@@ -388,13 +389,13 @@
 										<option value="887">Yemen</option>
 										<option value="894">Zambia</option>
 										<option value="716">Zimbabwe</option>
-									</select>	
+									</select>
 								</div>
 							<br />
 								<div class="selectbox">
 									<p class="regi_form">Bedrooms:</p>
 									<select name="bedrooms" value="bedrooms" required="">
-										<option value="0">0</option>
+										<option value="">Select the amount of bedrooms</option>
 										<option value="1">1</option>
 										<option value="2">2</option>
 										<option value="3">3</option>
@@ -412,7 +413,7 @@
 								<div class="selectbox">
 									<p class="regi_form">Bathrooms:</p>
 									<select name="bathrooms" value="bathrooms"  required="">
-										<option value="0">0</option>
+										<option value="">Select the amount of bathrooms</option>
 										<option value="1">1</option>
 										<option value="2">2</option>
 										<option value="3">3</option>
@@ -425,7 +426,7 @@
 							<div class="selectbox">
 									<p class="regi_form">Sleeps:</p>
 									<select name="sleeps" value="sleeps" required="">
-										<option value="0">0</option>
+										<option value="">Select the amount of places to spend the night</option>
 										<option value="1">1</option>
 										<option value="2">2</option>
 										<option value="3">3</option>

@@ -9,6 +9,7 @@ class HouseOverview extends CI_Controller
     public function __construct() {
         parent::__construct();
         $this->load->library('form_validation');
+        $this->load->helper('form');
         $this->load->model('vacationhouse');
          
     }
@@ -25,7 +26,15 @@ class HouseOverview extends CI_Controller
                 $data = array();
                 $vacation_homesData = array();
                 if($this->input->post('regisHomeSubmit')){
-                    $this->form_validation->set_rules('name', 'Name', 'required');
+                    $this->form_validation->set_rules('name', 'Name', 'required|alpha');
+                    $this->form_validation->set_rules('price_per_night','Price_per_night','required|is_natural');
+                    $this->form_validation->set_rules('price_per_week','Price_per_week','required|is_natural');
+                    $this->form_validation->set_rules('damage_deposit','Damage_deposit','required|integer');
+                    $this->form_validation->set_rules('minimum_stay','minimum_stay','required|integer');
+                    $this->form_validation->set_rules('country_id', 'Country', 'is_natural_no_zero');
+                    $this->form_validation->set_rules('bedrooms','Bedrooms','required|integer');
+                    $this->form_validation->set_rules('bathrooms','Bathrooms','required|integer');
+                    $this->form_validation->set_rules('sleeps','Sleeps','required|integer');
 
                     $vacation_homesData = array(
                         'name' => strip_tags($this->input->post('name')),
