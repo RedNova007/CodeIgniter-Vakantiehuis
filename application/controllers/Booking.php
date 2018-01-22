@@ -66,6 +66,7 @@ class Booking extends CI_Controller {
 
     public function succes()
     {
+        $this->load->view('_templates/header');
         $this->load->view('booking/Booking_Succes');
 
     }   
