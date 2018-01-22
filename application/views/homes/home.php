@@ -70,7 +70,7 @@
 							<p><b>Price Per Night: €</b><?php echo $vacationhouse['price_per_night']; ?></p>	
 							<p><b>Price Per Week: €</b><?php echo $vacationhouse['price_per_week']; ?></p>	
 							<p><b>Damage Deposit: €</b><?php echo $vacationhouse['damage_deposit']; ?></p>		
-							<a href="<?php echo base_url(); ?>Score/reviews"><button class="btn-primary">Score & Reviews</button></a>						
+							<a href="<?php echo base_url(); ?>Rating/score?id=<?php echo($vacationhouse['id'])?>"><button class="btn-primary">Score & Reviews</button></a>						
 							<a href="<?php echo base_url(); ?>Booking/index?id=<?php echo($vacationhouse['id'])?>"><button class="btn-primary">Price & Book</button></a>							
 						</div>
 					</div>

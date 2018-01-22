@@ -21,4 +21,13 @@ class Rating_model extends CI_Model {
             return false;
         }
     }
+
+    public function get_vacationhome_info($homeId)
+    {
+        $where = $this->db->where('id', $homeId);
+        $query = $this->db->get('vacation_homes');  
+        
+        return $query->row_array();
+    }
+
 }
