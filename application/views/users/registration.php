@@ -32,7 +32,7 @@
 								</div>
 								<div class="form-group has-feedback">
 									<p class="regi_form"> Email * </p>
-									<input type="email" class="form-control inputEmail" name="email" placeholder="Example@gmail.com" data-error="That email address is invalid" required="" value="<?php echo !empty($user['email'])?$user['email']:''; ?>">
+									<input type="email" onpaste="return false;" class="form-control inputEmail" name="email" placeholder="Example@gmail.com" data-error="That email address is invalid" required="" value="<?php echo !empty($user['email'])?$user['email']:''; ?>">
 									<div class="regi_button">!
                                         <span class="info-hover">Insert your email, for example 'Jandevries@gmail.com'</span>
                                     </div>
@@ -40,7 +40,7 @@
 								</div>
 								<div class="form-group valid-form">
 									<p class="regi_form"> Phonenumber * </p>
-									<input type="text" onkeydown="return event.which >= 8 && event.which <= 57" class="form-control" name="phone" placeholder="06123456789" required="" value="<?php echo !empty($user['phone'])?$user['phone']:''; ?>">
+									<input type="text" onkeydown="return event.which >= 8 && event.which <= 57" class="form-control" name="phone" placeholder="06123456789" onpaste="return false;" required="" value="<?php echo !empty($user['phone'])?$user['phone']:''; ?>">
 									<div class="regi_button">!
                                         <span class="info-hover">Insert your phonenumber, for example '06123456789</span>
                                     </div>
@@ -49,14 +49,17 @@
 									<p class="regi_form"> Password * </p>
 								    <input type="password" class="form-control inputPassword" name="password" placeholder="Password" required="">
 									<div class="pw_button">!
-									    <span class="info-hover">Insert your password.</span>
+									    <span class="info-hover">Insert your password. <!-- <br>
+									    	REQUIRED: 1 Lowecase letter, 1 Uppercase letter, 1 Number, 1 Special character and It must be at least 5 characters long. -->
+									    </span>
 									</div>
 								  <?php echo form_error('password','<span class="help-block">','</span>'); ?>
 								</div>
 								<div class="form-group">
 								  	<input type="password" class="form-control" data-match=".inputPassword" data-match-error="Whoops, these don't match" name="conf_password" placeholder="Confirm password" required="">
 								  	<div class="pwcf_button">!
-									    <span class="info-hover">This is an input where you comfirm your password</span>
+									    <span class="info-hover">This is an input where you comfirm your password. <!-- <br>
+									    	REQUIRED: 1 Lowecase letter, 1 Uppercase letter, 1 Number, 1 Special character and It must be at least 5 characters long.</span> -->
 									</div>
 								  <?php echo form_error('conf_password','<span class="help-block">','</span>'); ?>
 								  <br>
