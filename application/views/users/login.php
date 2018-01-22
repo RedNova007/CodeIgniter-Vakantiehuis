@@ -10,6 +10,10 @@
 		<div class="progressbar-heading grids-heading">
 			<h2>User Login</h2>
 		</div>
+		<?php if($this->session->userdata('isUserLoggedIn') == TRUE)
+		{ 
+			redirect('');
+		}; ?>
 		
 		<div class="forms-grids">
 			<div class="forms3">
