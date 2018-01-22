@@ -2,7 +2,6 @@
 <html lang="en">  
 <head>
 <link href="<?php echo base_url(); ?>assets/css/loginstyle.css" rel='stylesheet' type='text/css' />
-<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
 </head>
 <body>
 <div class="container">
@@ -11,6 +10,10 @@
 		<div class="progressbar-heading grids-heading">
 			<h2>User Login</h2>
 		</div>
+		<?php if($this->session->userdata('isUserLoggedIn') == TRUE)
+		{ 
+			redirect('');
+		}; ?>
 		
 		<div class="forms-grids">
 			<div class="forms3">
