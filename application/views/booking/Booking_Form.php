@@ -115,7 +115,7 @@
               <br />
                   <p class="regi_form">Special Requests</p>
                 <div class="form-group valid-form">
-                  <input type="text" class="form-control" name="booking_requests" maxlength="500" placeholder="Any spacial requests?" required="" value="<?php echo !empty($Booking['booking_requests'])?$Booking['booking_requests']:''; ?>"> 
+                  <input type="text" class="form-control" name="booking_requests" maxlength="500" placeholder="Any special requests?" required="" value="<?php echo !empty($Booking['booking_requests'])?$Booking['booking_requests']:''; ?>"> 
                   <?php echo form_error('booking_requests','<span class="help-block">','</span>'); ?>
                 </div>
                 <div class="form-group">
