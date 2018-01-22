@@ -27,7 +27,7 @@
 							<p><b>Gender: </b><?php echo $user['gender']; ?></p>
 							<?php if ($user['role'] == 'Owner'){?>
 							<a href="<?php echo base_url(); ?>HouseOverview/house" ><button class="btn-primary">Your homes</button></a>
-							<a href="<?php echo base_url(); ?>HouseOverview/register"><button class="btn-primary">Register a Vacationhouse</button></a>
+							<a href="<?php echo base_url(); ?>HouseOverview/register"><button class="btn-primary">Register a Vacactionhome</button></a>
 							<?php } ?>			
 						</div> 
 					</div>
