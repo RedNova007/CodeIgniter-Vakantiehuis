@@ -20,7 +20,7 @@ class Vacationhouse extends CI_Model{
             $this->db->where('id',$params['id']);
             $query = $this->db->get();
             $result = $query->row_array();
-        }else{
+        }else{ 
             //set start and limit
             if(array_key_exists("start",$params) && array_key_exists("limit",$params)){
                 $this->db->limit($params['limit'],$params['start']);
@@ -73,4 +73,5 @@ class Vacationhouse extends CI_Model{
         
         return $result;
     }
+    
 }

@@ -8,7 +8,7 @@
     <!-- validation --> 
 	<div class="grids">
 		<div class="progressbar-heading grids-heading">
-			<h2>Vacationhouse Registration</h2>
+			<h2>Vacationhome Registration</h2>
 		</div>
 		
 		<div class="forms-grids">
@@ -17,15 +17,15 @@
 				<div class="panel panel-widget agile-validation register-form">
 					<div class="validation-grids widget-shadow" data-example-id="basic-forms"> 
 						<div class="input-info">
-							<h3>Register Vacationhouse:</h3>
+							<h3>Register Vacationhome:</h3>
 						</div>
 						<div class="form-body form-body-info">
 							<form action="" method="post">
 								<div class="form-group valid-form">
 									<p class="regi_form"> Name * </p>
-									<input type="text" class="form-control" name="name" maxlength="30" placeholder="Name Vacationhouse" required="" value="<?php echo !empty($vacationhouse['name'])?$vacationhouse['name']:''; ?>">
+									<input type="text" class="form-control" name="name" maxlength="30" placeholder="Name Vacationhome" required="" value="<?php echo !empty($vacationhouse['name'])?$vacationhouse['name']:''; ?>">
 									<div class="regi_button">!
-										<span class="info-hover">Insert the name for your vacationhouse, for example 'Villa la dans.</span>
+										<span class="info-hover">Insert the name for your vacationhome, for example 'Villa la dans.</span>
 									</div>
 									<?php echo form_error('name','<span class="help-block">','</span>'); ?>
 								</div>
