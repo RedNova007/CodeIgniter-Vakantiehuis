@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         		<input type="text" class ="home_inputs search_input" name="query" value="<?php echo html_escape($query = null); ?>" placeholder="Search..">
                 <input type="date" class ="home_inputs" name="query2" value="<?php echo html_escape($query2 = null); ?>"  placeholder="From">
                 <input type="date" class ="home_inputs" name="query3" value="<?php echo html_escape($query3 = null); ?>"  placeholder="Until">
-                <input type="number" class ="home_inputs" name="query4" value="<?php echo html_escape($query4 = null); ?>"  placeholder="Guests">
+                <input type="number" pattern="[1-9]" max="20" title="You can only type numbers here." class ="home_inputs" name="query4" value="<?php echo html_escape($query4 = null); ?>"  placeholder="Guests">
 				<input type="submit" name="go" value="Search">
 			</form>
 		</div>
