@@ -24,7 +24,6 @@ class Users extends CI_Controller {
             redirect('users/login');
         }
     }
-    
     /*
      * User login
      */
@@ -61,7 +60,7 @@ class Users extends CI_Controller {
         }
         //load the view
         $this->load->view('_templates/header');
-        $this->load->view('users/login', $data);
+        $this->load->view('users/login', $data);  
         
     }
     
@@ -87,6 +86,20 @@ class Users extends CI_Controller {
                 'role' =>  strip_tags($this->input->post('role'))
             );
 
+            // $rules = array(
+            //     [
+            //         'field' => 'password',
+            //         'label' => 'Password',
+            //         'rules' => 'callback_valid_password',
+            //     ],
+            //     [
+            //         'field' => 'repeat_password',
+            //         'label' => 'Repeat Password',
+            //         'rules' => 'matches[password]',
+            //     ],
+            // );
+            // $this->form_validation->set_rules($rules);
+
             if($this->form_validation->run() == true){
                 $insert = $this->user->insert($userData);
                 if($insert){
@@ -102,6 +115,52 @@ class Users extends CI_Controller {
         $this->load->view('_templates/header');
         $this->load->view('users/registration', $data);
     }
+    
+    //   public function valid_password($password = '')
+    // {
+    //     $password = trim($password);
+    //     $regex_lowercase = '/[a-z]/';
+    //     $regex_uppercase = '/[A-Z]/';
+    //     $regex_number = '/[0-9]/';
+    //     $regex_special = '/[!@#$%^&*()\-_=+{};:,<.>§~]/';
+
+    //     if (empty($password))
+    //     {
+    //         $this->form_validation->set_message('valid_password', 'The {field} field is required.');
+    //         return FALSE;
+    //     }
+    //     if (preg_match_all($regex_lowercase, $password) < 1)
+    //     {
+    //         $this->form_validation->set_message('valid_password', 'The {field} field must be at least one lowercase letter.');
+    //         return FALSE;
+    //     }
+    //     if (preg_match_all($regex_uppercase, $password) < 1)
+    //     {
+    //         $this->form_validation->set_message('valid_password', 'The {field} field must be at least one uppercase letter.');
+    //         return FALSE;
+    //     }
+    //     if (preg_match_all($regex_number, $password) < 1)
+    //     {
+    //         $this->form_validation->set_message('valid_password', 'The {field} field must have at least one number.');
+    //         return FALSE;
+    //     }
+    //     if (preg_match_all($regex_special, $password) < 1)
+    //     {
+    //         $this->form_validation->set_message('valid_password', 'The {field} field must have at least one special character.' . ' ' . htmlentities('!@#$%^&*()\-_=+{};:,<.>§~'));
+    //         return FALSE;
+    //     }
+    //     if (strlen($password) < 5)
+    //     {
+    //         $this->form_validation->set_message('valid_password', 'The {field} field must be at least 5 characters in length.');
+    //         return FALSE;
+    //     }
+    //     if (strlen($password) > 32)
+    //     {
+    //         $this->form_validation->set_message('valid_password', 'The {field} field cannot exceed 32 characters in length.');
+    //         return FALSE;
+    //     }
+    //     return TRUE;
+    // }
     
     /*
      * User logout
@@ -127,4 +186,5 @@ class Users extends CI_Controller {
             return TRUE;
         }
     }
+  
 }

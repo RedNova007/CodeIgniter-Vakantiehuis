@@ -22,7 +22,8 @@ class Rating extends CI_Controller
                 $vacationhome_review = array(
                     'home_id' => strip_tags($this->input->post('id')),
                     'description' => strip_tags($this->input->post('description')),
-                    'stars'=> strip_tags($this->input->post('stars')),
+                    'rate'=> strip_tags($this->input->post('rate')),
+                    'name' => strip_tags($this->input->post('name')),
                 );
                 $insert = $this->rating_model->insert($vacationhome_review);
                 if($insert){
@@ -33,10 +34,11 @@ class Rating extends CI_Controller
                 }
 
             }
-            
             $data['vacationhouse'] = $vacationhome_review;
             $homeId = $_GET ['id'];
             $data['vacationhouse'] = $this->rating_model->get_vacationhome_info($homeId);
+            $data['rating'] = $this->rating_model->get_vacationhome_review($homeId);
+            $this->load->view('_templates/header');
             $this->load->view('ratings/ratings', $data);
         }
         else{
