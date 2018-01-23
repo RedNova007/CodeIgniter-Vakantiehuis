@@ -44,7 +44,7 @@ class HouseOverview extends CI_Controller
                     if($this->form_validation->run() == true){
                         $insert = $this->vacationhouse->insert($vacation_homesData);
                         if($insert){
-                            redirect('HouseOverview/succes');
+                            redirect('');
                         }else{
                             $data['error_msg'] = 'Some problems occured, please try again.';
                         }
@@ -98,34 +98,5 @@ class HouseOverview extends CI_Controller
         $this->load->view('Succes/succes');
     }
 
-    // public function score()
-    // {
-    //     if ($this->session->userdata('isUserLoggedIn')) {
-
-    //         $data = array();
-    //         $vacationhome_review = array();
-    //         if($this->input->post('homeReviewSubmit')){
-    //             $vacationhome_review = array(
-    //                 'description' => strip_tags($this->input->post('description')),
-    //                 'stars'=> strip_tags($this->input->post('stars')),
-    //             );
-    //             $insert = $this->vacationhouse->insertrev($vacationhome_review);
-    //             if($insert){
-    //                 redirect('HouseOverview/succes');
-    //             }
-    //             else{
-    //                 $data['error_msg'] = 'Some problems occured, please try again.';
-    //             }
-
-    //         }
-            
-    //         $data['vacationhouse'] = $vacationhome_review;
-    //         $this->load->view('houseOverview/review', $data);
-    //     }
-    //     else{
-    //         redirect('Users/login');
-    //     }
-       
-    // }
 
 }
