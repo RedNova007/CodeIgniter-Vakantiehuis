@@ -29,38 +29,48 @@
                                     <p><b>Pets: </b><?php echo $vacationhouse['pets_allowed']; ?></p>   
                                     <p><b>Price Per Night: €</b><?php echo $vacationhouse['price_per_night']; ?></p>    
                                     <p><b>Price Per Week: €</b><?php echo $vacationhouse['price_per_week']; ?></p>  
-                                    <p><b>Damage Deposit: €</b><?php echo $vacationhouse['damage_deposit']; ?></p>  
+                                    <p><b>Damage Deposit: €</b><?php echo $vacationhouse['damage_deposit']; ?></p><br> 
+                                    
+                                    <h3>Reviews</h3>
+                                    <?php foreach ($rating as $rate) { ?>
+                                        <p>Name: <?php echo $rate['name'];?></p>
+                                        <p>Description: <?php echo $rate['description'];?></p>
+                                        <p>Rate: <?php echo $rate['rate'];?></p><br>
+                                   <?php }  ; ?> 
+                                  
                                     <?php $id = $_GET ['id']; ?>
                                     <form action="" method="post">
-                                        <input type="text" class="form-control " onpaste="return false;" style="margin-bottom: 5px; margin-top: 5px;" placeholder="Your review..." name="description" >
-                                        <p style="color: white;">Rate with stars 1-5</p>
+                                        <h3> Review form </h3>
+                                        <p style="color: white;">Name :</p> <input type="text" class="form-control" placeholder="Your name.." name="name">
+                                       <p style="color: white;">Description :</p><textarea type="text" class="form-control " style="margin-bottom: 5px; margin-top: 5px;" placeholder="Your review..." name="description"></textarea>
+                                        <p style="color: white;">Rate from 1-5 :</p>
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="stars" value="1" style="color: white; ">
+                                                <input type="radio" name="rate" value="1" style="color: white; ">
                                                     1 
                                             </label>
                                         </div> 
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="stars" value="2" style="color: white;">
+                                                <input type="radio" name="rate" value="2" style="color: white;">
                                                     2
                                             </label>
-                                        </div>
+                                            </div>
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="stars" value="3" style="color: white;">
+                                                <input type="radio" name="rate" value="3" style="color: white;">
                                                     3
                                             </label>
                                         </div>
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="stars" value="4" style="color: white;">
+                                                <input type="radio" name="rate" value="4" style="color: white;">
                                                     4
                                             </label>
                                         </div>
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="stars" value="5" style="color: white;">
+                                                <input type="radio" name="stratears" value="5" style="color: white;">
                                                     5
                                             </label>
                                         </div>

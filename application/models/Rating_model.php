@@ -22,11 +22,19 @@ class Rating_model extends CI_Model {
         }
     }
 
-    public function get_vacationhome_info($homeId)
-    {
+    public function get_vacationhome_info($homeId){
+
         $where = $this->db->where('id', $homeId);
         $query = $this->db->get('vacation_homes');  
         
         return $query->row_array();
+     }
+ 
+    public function get_vacationhome_review($homeId){
+
+            $where = $this->db->where('home_id', $homeId);
+            $query = $this->db->get('vacationhome_ratings');
+            $result = $query->result_array();
+            return $result;
     }
 }
