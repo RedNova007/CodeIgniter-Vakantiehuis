@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         		<input type="text" class ="home_inputs search_input" name="query" value="<?php echo html_escape($query = null); ?>" placeholder="Search..">
                 <input type="date" class ="home_inputs" name="query2" value="<?php echo html_escape($query2 = null); ?>"  placeholder="From">
                 <input type="date" class ="home_inputs" name="query3" value="<?php echo html_escape($query3 = null); ?>"  placeholder="Until">
-                <input type="number" pattern="[1-9]" max="20" title="You can only type numbers here." class ="home_inputs" name="query4" value="<?php echo html_escape($query4 = null); ?>"  placeholder="Guests">
+                <input type="number" id="numericOnly" pattern="[1-9]" min="0" max="20" title="You can only type numbers here." class ="home_inputs" name="query4" value="<?php echo html_escape($query4 = null); ?>"  placeholder="Guests">
 				<input type="submit" name="go" value="Search">
 			</form>
 		</div>
@@ -61,5 +61,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 </div>
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+<script  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous">
+</script>
+
+<script>
+	$('#numericOnly').keypress(function(e) {
+    var a = [];
+    var k = e.which;
+    
+    for (i = 48; i < 58; i++)
+        a.push(i);
+    
+    if (!(a.indexOf(k)>=0))
+        e.preventDefault();
+	});
+</script>
 </body>
 </html>
+

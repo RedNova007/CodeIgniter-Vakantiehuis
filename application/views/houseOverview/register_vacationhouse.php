@@ -36,17 +36,24 @@
 							<br />			
 								<div class="form-group has-feedback">
 									<p class="regi_form"> Price per night * </p>
-									<input type="text" onkeydown="return event.which >= 8 && event.which <= 57" class="form-control" name="price_per_night" placeholder="Price per night &euro;" data-error="Price per night is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
+									<input type="number" min="1" onkeydown="return event.which >= 8 && event.which <= 57" class="form-control" name="price_per_night" placeholder="Price per night &euro;" data-error="Price per night is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
 									<button class="regi_button" title="Insert the price per night.">!</button>
 									<?php echo form_error('price_per_night','<span class="help-block">','</span>'); ?>
 								</div>		
 							<br />
 								<div class="form-group has-feedback">
 									<p class="regi_form"> Price per week * </p>
-									<input type="text" onkeydown="return event.which >= 8 && event.which <= 57" class="form-control" name="price_per_week" placeholder="Price per week &euro;" data-error="Price per week is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
+									<input type="number" min="1" onkeydown="return event.which >= 8 && event.which <= 57" class="form-control" name="price_per_week" placeholder="Price per week &euro;" data-error="Price per week is invalid" required="" value="<?php echo !empty($vacationhouse['price_per_night'])?$vacationhouse['price_per_night']:''; ?>">
 									<button class="regi_button" title="Insert the price per week.">!</button>
 									<?php echo form_error('price_per_night','<span class="help-block">','</span>'); ?>
 								</div>		
+							<br />
+								<div class="form-group has-feedback">
+									<p class="regi_form"> Damage deposit * </p>
+									<input type="number" min="1" onkeydown="return event.which >= 8 && event.which <= 57" class="form-control" name="damage_deposit" placeholder="Damage deposit &euro;" data-error="Damage deposit is invalid" required="" value="<?php echo !empty($vacationhouse['damage_deposit'])?$vacationhouse['damage_deposit']:''; ?>">
+									<button class="regi_button" title="Insert the damage deposit amount.">!</button>
+									<?php echo form_error('damage_deposit','<span class="help-block">','</span>'); ?>
+								</div>
 							<br />							
 								<div class="form-group">
 									<p class="regi_form">Pets allowed</p>
@@ -71,36 +78,6 @@
 											  No
 											</label>
 										</div>
-								</div>
-							<br />
-								<div class="selectbox">
-									<p class="regi_form">Damage deposit:</p>
-										<select name="damage_deposit" value="damage_deposit" required="">
-										<option value="0">&euro;0</option>
-										<option value="10">&euro;10</option>
-										<option value="25">&euro;25</option>
-										<option value="50">&euro;50</option>
-										<option value="75">&euro;75</option>
-										<option value="100">&euro;100</option>
-										<option value="125">&euro;125</option>
-										<option value="150">&euro;150</option>
-										<option value="175">&euro;175</option>
-										<option value="200">&euro;200</option>
-										<option value="250">&euro;250</option>
-										<option value="300">&euro;300</option>
-										<option value="350">&euro;350</option>
-										<option value="400">&euro;400</option>
-										<option value="450">&euro;450</option>
-										<option value="500">&euro;500</option>
-										<option value="550">&euro;550</option>
-										<option value="600">&euro;600</option>
-										<option value="650">&euro;650</option>
-										<option value="700">&euro;700</option>
-										<option value="800">&euro;800</option>
-										<option value="900">&euro;900</option>
-										<option value="1000">&euro;1000</option>
-										<option value="2000">&euro;2000</option>
-									</select>	
 								</div>
 							<br />	
 								<div class="selectbox">
