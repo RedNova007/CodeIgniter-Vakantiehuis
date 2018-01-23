@@ -31,12 +31,16 @@
                                     <p><b>Price Per Week: €</b><?php echo $vacationhouse['price_per_week']; ?></p>  
                                     <p><b>Damage Deposit: €</b><?php echo $vacationhouse['damage_deposit']; ?></p><br> 
                                     
-                                    <h3>Reviews</h3>
-                                    <?php foreach ($rating as $rate) { ?>
+                                   
+                                    <?php if($rating != null){ ?>
+                                        <h3>Reviews</h3>
+                                        <?php foreach ($rating as $rate) { ?>
                                         <p>Name: <?php echo $rate['name'];?></p>
                                         <p>Description: <?php echo $rate['description'];?></p>
                                         <p>Rate: <?php echo $rate['rate'];?></p><br>
-                                   <?php }  ; ?> 
+                                        <?php }  ; ?> 
+                                     <?php }; ?>
+                                    
                                   
                                     <?php $id = $_GET ['id']; ?>
                                     <form action="" method="post">
