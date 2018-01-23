@@ -35,6 +35,9 @@ class Rating extends CI_Controller
             }
             
             $data['vacationhouse'] = $vacationhome_review;
+            $homeId = $_GET ['id'];
+            $data['vacationhouse'] = $this->rating_model->get_vacationhome_info($homeId);
+            $this->load->view('ratings/ratings', $data);
             $this->load->view('ratings/ratings', $data);
         }
         else{
