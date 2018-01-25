@@ -23,7 +23,7 @@
               <h3></h3>
             </div>
             <div class="form-body form-body-info">
-              <form action="" method="post">  
+              <?php echo form_open( base_url( 'Booking/index' ), array( 'id' => 'booking-form', 'class' => 'booking' ) ); ?>
                 <div class="form-group valid-form">
                   <input type="hidden" class="form-control" name="vacation_home_id" maxlength="30" placeholder="" required="" value="<?php echo "$id"; ?>">                   
                   <?php echo form_error('vacation_home_id','<span class="help-block">','</span>'); ?>
@@ -121,15 +121,14 @@
                 <div class="form-group">
                   <input type="submit" name="bookingSubmit" class="btn-primary" value="Submit"/>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       <div class="clear"> </div>
-      </div>
     </div>
   </div>
+</div>
 </div>
 </body>
 </html>

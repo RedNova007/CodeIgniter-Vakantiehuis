@@ -21,7 +21,7 @@
 							<h3>Register Vacationhome:</h3>
 						</div>
 						<div class="form-body form-body-info">
-							<form action="" method="post">
+							<?php echo form_open( base_url( 'HouseOverview/Register' ), array( 'id' => 'house-form', 'class' => 'house' ) ); ?>
 								<div class="form-group valid-form">
 									<p class="regi_form"> Name * </p>
 									<input type="text" class="form-control" name="name" maxlength="30" placeholder="Name Vacationhome" required="" value="<?php echo !empty($vacationhouse['name'])?$vacationhouse['name']:''; ?>">
@@ -423,15 +423,14 @@
 								<div class="form-group">
 									<input type="submit" name="regisHomeSubmit" class="btn-primary" value="Submit"/>
 								</div>
-							</form>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
 			<div class="clear"> </div>
-			</div>
 		</div>
 	</div>
+</div>
 	<!-- //validation -->
 </div>
 </body>

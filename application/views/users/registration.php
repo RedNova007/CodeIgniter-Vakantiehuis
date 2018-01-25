@@ -21,7 +21,7 @@
 							<h3>Register Form :</h3>
 						</div>
 						<div class="form-body form-body-info">
-							<form action="" method="post">					
+							<?php echo form_open( base_url( 'users/registration' ), array( 'id' => 'register-form', 'class' => 'register' ) ); ?>				
 								<div class="form-group valid-form">
 									<p class="regi_form"> Name * </p>
 									<input type="text" class="form-control" name="name" placeholder="Your name" required="" value="<?php echo !empty($user['name'])?$user['name']:''; ?>">
@@ -114,7 +114,6 @@
 								<div class="form-group">
 									<input type="submit" name="regisSubmit" class="btn-primary" value="Submit"/>
 								</div>
-							</form>
 						</div>
 						<p class="footInfo">Already have an account? <a href="<?php echo base_url(); ?>users/login">Login here</a></p>
 					</div>

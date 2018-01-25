@@ -31,7 +31,7 @@
 							?>
 						</div>
 						<div class="form-body form-body-info">
-							<form action="" method="post">
+							<?php echo form_open( base_url( 'users/login' ), array( 'id' => 'login-form', 'class' => 'login' ) ); ?>
 								<div class="form-group has-feedback">
 									<input type="email" class="form-control inputEmail" name="email" placeholder="Email" data-error="That email address is invalid" required="" value="">
 									<?php echo form_error('email','<span class="help-block">','</span>'); ?>
@@ -43,7 +43,6 @@
 								<div class="form-group">
 									<input type="submit" name="loginSubmit" class="btn-primary" value="Submit"/>
 								</div>
-							</form>
 						</div>
 						<p class="footInfo">Don't have an account? <a href="<?php echo base_url(); ?>users/registration">Register here</a></p>
 					</div>
