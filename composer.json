@@ -21,3 +21,11 @@
 		"phpunit/phpunit": "4.* || 5.*"
 	}
 }
+
+$ composer require mollie/mollie-api-php:1.9.*
+
+{
+    "require": {
+        "mollie/mollie-api-php": "1.9.*"
+    }
+}

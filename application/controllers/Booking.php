@@ -48,7 +48,7 @@ class Booking extends CI_Controller {
                     if($this->form_validation->run() == true){
                         $insert = $this->Booking_model->insert($bookingData);
                         if($insert){
-                            redirect('booking/Succes');
+                            redirect("mollie/payment");
                         }else{
                             $data['error_msg'] = 'Some problems occured, please try again.';
                         }
@@ -62,7 +62,6 @@ class Booking extends CI_Controller {
             redirect('users/login');
         }
     }
-
 
     public function succes()
     {
