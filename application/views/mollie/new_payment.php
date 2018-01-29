@@ -66,7 +66,28 @@ function database_write ($order_id, $status)
 	//$database = dirname(__FILE__) . "/orders/order-{$order_id}.txt";
 
 	//file_put_contents($database, $status);
-	$data = array($order_id, $status);
+	//$data = array($order_id, $status);
 
-    $insert = $this->db->insert($this->orders, $data);
+    //$insert = $this->db->insert($this->orders, $data);
+
+	$username = "vakhuis";
+	$password = "d5yNIojs";
+
+	// Create connection
+	$conn = new PDO("mysql:host=ftp.vakhuis.dvc-icta.nl;dbname=vakhuis_data", $username, $password);
+
+	// Check connection
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	}else{
+		// Query
+		$sql = "INSERT INTO orders (id, status) VALUES ($order_id, $payment->status)";
+	
+		// Insert
+		if ($conn->query($sql) === TRUE) {
+		    echo "New record created successfully";
+		} else {
+		    echo "Error: " . $sql . "<br>" . $conn->error;
+		}
+	}
 }
