@@ -73,7 +73,7 @@ class Users extends CI_Controller {
         if($this->input->post('regisSubmit')){
             $this->form_validation->set_rules('name', 'Name', 'required|alpha');
             $this->form_validation->set_rules('email', 'Email', 'required|valid_email|callback_email_check');
-            $this->form_validation->set_rules('password', 'password', 'required');
+            $this->form_validation->set_rules('password', 'password', 'required|alpha_numeric|min_length[8]|max_length[30]');
             $this->form_validation->set_rules('conf_password', 'confirm password', 'required|matches[password]');
             $this->form_validation->set_rules('role', 'Role', 'required');
 
