@@ -16,12 +16,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<div class="image">
 		<div class="search">
 			<form  method="post" action="search/results"  method="POST"> 
+			<?php echo form_open( base_url( 'search/results' ), array( 'id' => 'search-form', 'class' => 'search' ) ); ?>
                 <input type="text" class ="home_inputs search_input" name="query" value="<?php echo html_escape($query = null); ?>" placeholder="Search..">
                 <input type="date" min="<?php echo date("Y-m-d"); ?>" class ="home_inputs" name="query2" value="<?php echo html_escape($query2 = null); ?>"  placeholder="From">
                 <input type="date" min="<?php echo date("Y-m-d"); ?>" class ="home_inputs" name="query3" value="<?php echo html_escape($query3 = null); ?>"  placeholder="Until">
                 <input type="number" id="numericOnly" pattern="[1-9]" min="0" max="20" title="You can only type numbers here." class ="home_inputs" name="query4" value="<?php echo html_escape($query4 = null); ?>"  placeholder="Guests">
 				<input type="submit" name="go" value="Search">
-			</form>
+			<?php echo form_close(); ?>
 		</div>
 		<?php echo '<img class="homepage_picture" src="data:image/jpeg;base64,'.base64_encode($homepage_picture['picture']) .'" />';?>
 	</div><br>
